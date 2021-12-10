@@ -26,7 +26,9 @@ public class LoginController implements ActionListener{
         if (e.getSource().equals(view.getLoginBtn())) {
             String username = view.getUsernameTextField().getText();
             String password = view.getPasswordTextField().getText();
-            model.checkUser(username, password);
+            if (model.checkUser(username, password)) {
+                view.dispose();
+            }
         }
     }
     

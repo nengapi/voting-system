@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import view.HomePage;
 
 public class UserModel {
 
@@ -26,7 +27,7 @@ public class UserModel {
         this.user = user;
     }
 
-    public void checkUser(String username, String password) {
+    public boolean checkUser(String username, String password) {
         con = Connect.ConnectDB();
         String sql = "SELECT student_id, password FROM users WHERE student_id=? AND password=?";
         try {
@@ -36,12 +37,17 @@ public class UserModel {
 
             rs = pst.executeQuery();
             if (rs.next()) {
-                System.out.println("login");
+                System.out.println("login successful");
+                HomePage hp = new HomePage();
+                hp.setVisible(true);
+                return true;
             } else {
-                System.out.println("wrong");
+                System.out.println("your username or password are wrong");
+                return false;
             }
         } catch (SQLException ex) {
             Logger.getLogger(UserModel.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
     }
 
