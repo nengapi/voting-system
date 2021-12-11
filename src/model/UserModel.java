@@ -11,9 +11,10 @@ import view.HomePage;
 public class UserModel {
 
     private User user;
-    private Connection con = null;
+    private final Connection con = Connect.ConnectDB();
     private ResultSet rs = null;
-    private PreparedStatement pst = null;
+    private PreparedStatement check = null, insert = null;
+    private String sql;
 
     public UserModel() {
         user = new User("", "", "");
@@ -28,14 +29,13 @@ public class UserModel {
     }
 
     public boolean checkUser(String username, String password) {
-        con = Connect.ConnectDB();
-        String sql = "SELECT student_id, password FROM users WHERE student_id=? AND password=?";
+        sql = "SELECT student_id, password FROM users WHERE student_id=? AND password=?";
         try {
-            pst = con.prepareStatement(sql);
-            pst.setString(1, username);
-            pst.setString(2, password);
+            check = con.prepareStatement(sql);
+            check.setString(1, username);
+            check.setString(2, password);
 
-            rs = pst.executeQuery();
+            rs = check.executeQuery();
             if (rs.next()) {
                 System.out.println("login successful");
                 HomePage hp = new HomePage();
@@ -45,6 +45,26 @@ public class UserModel {
                 System.out.println("your username or password are wrong");
                 return false;
             }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserModel.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+
+    public boolean insertUser(String studentId, String password, String fullName) {
+        sql = "INSERT INTO users (student_id, password, fullName, created_at) VALUES (?, ?, ?, ?)";
+        try {
+
+            insert = con.prepareStatement(sql);
+
+            insert.setInt(1, Integer.parseInt(studentId));
+            insert.setString(2, password);
+            insert.setString(3, fullName);
+            insert.setTimestamp(4, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));
+
+            insert.executeUpdate();
+
+            return true;
         } catch (SQLException ex) {
             Logger.getLogger(UserModel.class.getName()).log(Level.SEVERE, null, ex);
             return false;

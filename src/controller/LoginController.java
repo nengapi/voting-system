@@ -1,4 +1,3 @@
-
 package controller;
 
 import java.awt.event.ActionEvent;
@@ -6,19 +5,21 @@ import java.awt.event.ActionListener;
 import model.UserModel;
 import view.LoginPage;
 
+public class LoginController implements ActionListener {
 
-public class LoginController implements ActionListener{
     private UserModel model;
     private LoginPage view;
 
     public LoginController() {
         view = new LoginPage();
         view.setVisible(true);
-        
+
         model = new UserModel();
-        
+
         //when user click login button
         view.getLoginBtn().addActionListener(this);
+
+        view.getRegisterBtn().addActionListener(this);
     }
 
     @Override
@@ -29,7 +30,10 @@ public class LoginController implements ActionListener{
             if (model.checkUser(username, password)) {
                 view.dispose();
             }
+        } else if (e.getSource().equals(view.getRegisterBtn())) {
+            //go to register page
+            new RegisterController();
         }
     }
-    
+
 }
