@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import view.AdminPanel;
 import view.HomePage;
 
 public class UserModel {
@@ -36,10 +37,21 @@ public class UserModel {
             check.setString(2, password);
 
             rs = check.executeQuery();
-            if (rs.next()) {
+
+            if (rs != null && rs.next()) {
+                ResultSet isAdmin = con.createStatement().executeQuery("SELECT isAdmin FROM users WHERE student_id='" + username + "'");
                 System.out.println("login successful");
-                HomePage hp = new HomePage();
-                hp.setVisible(true);
+                if (isAdmin.next()) {
+                    if (isAdmin.getBoolean("isAdmin")) {
+                        AdminPanel ad = new AdminPanel();
+                        ad.setVisible(true);
+                        System.out.println("admin");
+                    } else {
+                        HomePage hp = new HomePage();
+                        hp.setVisible(true);
+                        System.out.println("user");
+                    }
+                }
                 return true;
             } else {
                 System.out.println("your username or password are wrong");
