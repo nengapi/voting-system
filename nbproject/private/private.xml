@@ -3,13 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/bridge-ai/Desktop/JavaApplication1/src/javaapplication1/VotePage.java</file>
-            <file>file:/Users/bridge-ai/Desktop/JavaApplication1/src/javaapplication1/HomePage.java</file>
-            <file>file:/Users/bridge-ai/Desktop/JavaApplication1/src/javaapplication1/EditProfile.java</file>
-            <file>file:/Users/bridge-ai/Desktop/JavaApplication1/src/javaapplication1/AddminPanal.java</file>
-            <file>file:/Users/bridge-ai/Desktop/JavaApplication1/src/javaapplication1/LoginPage.java</file>
-            <file>file:/Users/bridge-ai/Desktop/JavaApplication1/src/javaapplication1/Comment.java</file>
-            <file>file:/Users/bridge-ai/Desktop/JavaApplication1/src/javaapplication1/Register.java</file>
+            <file>file:/C:/Users/wanna/Desktop/voting-system/src/view/VotePage.java</file>
+            <file>file:/C:/Users/wanna/Desktop/voting-system/src/view/EditProfile.java</file>
+            <file>file:/C:/Users/wanna/Desktop/voting-system/src/view/Comment.java</file>
+            <file>file:/C:/Users/wanna/Desktop/voting-system/src/view/AdminPanel.java</file>
+            <file>file:/C:/Users/wanna/Desktop/voting-system/src/view/RegisterPage.java</file>
+            <file>file:/C:/Users/wanna/Desktop/voting-system/src/view/HomePage.java</file>
+            <file>file:/C:/Users/wanna/Desktop/voting-system/src/view/RoundedPanel.java</file>
+            <file>file:/C:/Users/wanna/Desktop/voting-system/src/view/LoginPage.java</file>
         </group>
     </open-files>
 </project-private>
