@@ -46,23 +46,23 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="153" max="32767" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
-              </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="355" max="-2" attributes="0"/>
-                          <Component id="backBtn" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="360" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="369" max="-2" attributes="0"/>
+                          <Component id="backBtn" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="149" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="544" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -71,31 +71,16 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="jPanel2" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" pref="312" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="backBtn" min="-2" pref="45" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="534" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="303" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
         <Component class="javax.swing.JButton" name="backBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#xe22;&#xe49;&#xe2d;&#xe19;&#xe01;&#xe25;&#xe31;&#xe1a;"/>
@@ -112,6 +97,25 @@
             <Property name="text" type="java.lang.String" value="&#xe04;&#xe33;&#xe41;&#xe19;&#xe30;&#xe19;&#xe33;"/>
           </Properties>
         </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea1">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="18" style="0"/>
+                </Property>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="&#xa;&#xa;1. &#xe1e;&#xe34;&#xe08;&#xe32;&#xe23;&#xe13;&#xe32;&#xe04;&#xe38;&#xe13;&#xe2a;&#xe21;&#xe1a;&#xe31;&#xe15;&#xe34;&#xe02;&#xe2d;&#xe07;&#xe1c;&#xe39;&#xe49;&#xe17;&#xe35;&#xe48;&#xe25;&#xe07;&#xe2a;&#xe21;&#xe31;&#xe04;&#xe23;&#xe23;&#xe31;&#xe1a;&#xe40;&#xe25;&#xe37;&#xe2d;&#xe01;&#xe15;&#xe31;&#xe49;&#xe07;&#xe43;&#xe2b;&#xe49;&#xe14;&#xe35;&#xe01;&#xe48;&#xe2d;&#xe19;&#xe15;&#xe31;&#xe14;&#xe2a;&#xe34;&#xe19;&#xe43;&#xe08;&#xe40;&#xe25;&#xe37;&#xe2d;&#xe01;&#xa;&#xa;2. &#xe40;&#xe21;&#xe37;&#xe48;&#xe2d;&#xe40;&#xe25;&#xe37;&#xe2d;&#xe01;&#xe41;&#xe25;&#xe49;&#xe27;&#xe44;&#xe21;&#xe48;&#xe2a;&#xe32;&#xe21;&#xe32;&#xe23;&#xe16;&#xe40;&#xe1b;&#xe25;&#xe35;&#xe48;&#xe22;&#xe19;&#xe44;&#xe14;&#xe49;&#xa;&#xa;3.&#xe44;&#xe1b;&#xe17;&#xe35;&#xe48;&#xe41;&#xe16;&#xe1a;&#xe40;&#xe25;&#xe37;&#xe2d;&#xe01;&#xe15;&#xe31;&#xe49;&#xe07;&#xe17;&#xe35;&#xe48;&#xe2d;&#xe22;&#xe39;&#xe48;&#xe14;&#xe49;&#xe32;&#xe19;&#xe02;&#xe49;&#xe32;&#xe07;&#xa;&#xa;4.&#xe04;&#xe25;&#xe34;&#xe01;&#xe15;&#xe31;&#xe27;&#xe40;&#xe25;&#xe37;&#xe2d;&#xe01;&#xe14;&#xe49;&#xe32;&#xe19;&#xe1a;&#xe19;&#xe0a;&#xe37;&#xe48;&#xe2d;&#xe02;&#xe2d;&#xe07;&#xe1c;&#xe39;&#xe49;&#xe25;&#xe07;&#xe2a;&#xe21;&#xe31;&#xe04;&#xe23;&#xe17;&#xe35;&#xe48;&#xe15;&#xe49;&#xe2d;&#xe07;&#xe01;&#xe32;&#xe23;&#xe08;&#xe30;&#xe40;&#xe25;&#xe37;&#xe2d;&#xe01;&#xa;&#xa;5.&#xe15;&#xe23;&#xe27;&#xe08;&#xe2a;&#xe2d;&#xe1a;&#xe0a;&#xe37;&#xe48;&#xe2d;&#xe02;&#xe2d;&#xe07;&#xe1c;&#xe39;&#xe49;&#xe25;&#xe07;&#xe2a;&#xe21;&#xe31;&#xe04;&#xe23;&#xe43;&#xe2b;&#xe49;&#xe14;&#xe35;&#xe01;&#xe48;&#xe2d;&#xe19;&#xe22;&#xe37;&#xe19;&#xe22;&#xe31;&#xe19;&#xe01;&#xe32;&#xe23;&#xe43;&#xe0a;&#xe49;&#xe2a;&#xe34;&#xe17;&#xe18;&#xe34;&#xe40;&#xe25;&#xe37;&#xe2d;&#xe01;&#xe15;&#xe31;&#xe49;&#xe07;&#xa;&#xa;6.&#xe01;&#xe14;&#xe1b;&#xe38;&#xe48;&#xe21;&#xe22;&#xe37;&#xe19;&#xe22;&#xe31;&#xe19;&#xe40;&#xe1e;&#xe37;&#xe48;&#xe2d;&#xe22;&#xe37;&#xe19;&#xe22;&#xe31;&#xe19;&#xe01;&#xe32;&#xe23;&#xe43;&#xe0a;&#xe49;&#xe2a;&#xe34;&#xe17;&#xe18;&#xe34;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>
