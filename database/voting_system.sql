@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 10, 2021 at 03:44 PM
+-- Generation Time: Dec 14, 2021 at 11:32 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -32,12 +32,9 @@ CREATE TABLE `users` (
   `student_id` bigint(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `fullName` varchar(255) NOT NULL,
-  `isAdmin` tinyint(1) DEFAULT 0
+  `isAdmin` tinyint(1) DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
 
 --
 -- Indexes for dumped tables
