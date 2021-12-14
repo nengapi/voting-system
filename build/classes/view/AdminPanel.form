@@ -93,7 +93,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="logoutBtn" min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jScrollPane2" pref="367" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" pref="367" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
@@ -149,6 +149,15 @@
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <Properties>
+            <Property name="horizontalScrollBar" type="javax.swing.JScrollBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="null"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="viewportView" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="default"/>
+            </Property>
+          </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
