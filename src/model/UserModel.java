@@ -1,5 +1,6 @@
 package model;
 
+import controller.HomePageController;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -47,8 +48,8 @@ public class UserModel {
                         ad.setVisible(true);
                         System.out.println("admin");
                     } else {
-                        HomePage hp = new HomePage();
-                        hp.setVisible(true);
+                        HomePageController hp = new HomePageController();
+//                        hp.setVisible(true);
                         System.out.println("user");
                     }
                 }

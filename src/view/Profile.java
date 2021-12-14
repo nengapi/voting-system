@@ -4,16 +4,19 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author bridge-ai
  */
-public class EditProfile extends javax.swing.JFrame {
+public class Profile extends javax.swing.JFrame {
 
     /**
      * Creates new form EditProfile
      */
-    public EditProfile() {
+    public Profile() {
         initComponents();
     }
 
@@ -30,10 +33,10 @@ public class EditProfile extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        showStdId = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        studentId = new javax.swing.JLabel();
+        StudentName = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        BackBtn = new javax.swing.JButton();
+        closeBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,9 +46,9 @@ public class EditProfile extends javax.swing.JFrame {
 
         jLabel3.setText("ชื่อ - นามสกุล");
 
-        showStdId.setText(": 63070121");
+        studentId.setText(": 63070121");
 
-        jLabel5.setText(": พิสิฐไชย เรืองวัฒนาพงษ์");
+        StudentName.setText(": พิสิฐไชย เรืองวัฒนาพงษ์");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -60,10 +63,10 @@ public class EditProfile extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
-                                .addComponent(jLabel5))))
+                                .addComponent(StudentName))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(74, 74, 74)
-                        .addComponent(showStdId)))
+                        .addComponent(studentId)))
                 .addContainerGap(222, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -72,27 +75,27 @@ public class EditProfile extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(showStdId)
+                .addComponent(studentId)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5)
+                .addComponent(StudentName)
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication1/images/blank-profile-picture-g50f297206_640 (1).png"))); // NOI18N
         jLabel1.setToolTipText("");
 
-        BackBtn.setBackground(new java.awt.Color(153, 153, 153));
-        BackBtn.setText("ย้อนกลับ");
-        BackBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        closeBtn.setBackground(new java.awt.Color(153, 153, 153));
+        closeBtn.setText("ย้อนกลับ");
+        closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BackBtnMouseClicked(evt);
+                closeBtnMouseClicked(evt);
             }
         });
-        BackBtn.addActionListener(new java.awt.event.ActionListener() {
+        closeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackBtnActionPerformed(evt);
+                closeBtnActionPerformed(evt);
             }
         });
 
@@ -107,7 +110,7 @@ public class EditProfile extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(309, 309, 309))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(BackBtn)
+                        .addComponent(closeBtn)
                         .addGap(362, 362, 362))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -121,7 +124,7 @@ public class EditProfile extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(BackBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(closeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
 
@@ -139,13 +142,13 @@ public class EditProfile extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
+    private void closeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BackBtnActionPerformed
+    }//GEN-LAST:event_closeBtnActionPerformed
 
-    private void BackBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackBtnMouseClicked
+    private void closeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBtnMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_BackBtnMouseClicked
+    }//GEN-LAST:event_closeBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -164,32 +167,57 @@ public class EditProfile extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EditProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EditProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EditProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EditProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EditProfile().setVisible(true);
+                new Profile().setVisible(true);
             }
         });
     }
 
+    public JButton getCloseBtn() {
+        return closeBtn;
+    }
+
+    public void setCloseBtn(JButton closeBtn) {
+        this.closeBtn = closeBtn;
+    }
+
+    public JLabel getStudentName() {
+        return StudentName;
+    }
+
+    public void setStudentName(JLabel StudentName) {
+        this.StudentName = StudentName;
+    }
+
+    public JLabel getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(JLabel studentId) {
+        this.studentId = studentId;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BackBtn;
+    private javax.swing.JLabel StudentName;
+    private javax.swing.JButton closeBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel showStdId;
+    private javax.swing.JLabel studentId;
     // End of variables declaration//GEN-END:variables
 }
