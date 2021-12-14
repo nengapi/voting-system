@@ -1,29 +1,35 @@
-
 package model;
 
-
 public class User {
-    private String student_id;
+
+    private String studentId;
     private String password;
-    private String full_name;
+    private String fullName;
 
     public User() {
         this("", "", "");
     }
 
-    
-    public User(String student_id, String password, String full_name) {
-        this.student_id = student_id;
+    public User(String studentId, String password) {
+        this(studentId, password, "");
+    }
+
+    public User(String studentId, String password, String fullName) {
+        this.studentId = studentId;
         this.password = password;
-        this.full_name = full_name;
+        this.fullName = fullName;
     }
 
-    public String getStudent_id() {
-        return student_id;
+    public String getStudentId() {
+        return studentId;
+    }
+    
+     public int getStudentIdToInt() {
+        return Integer.parseInt(studentId);
     }
 
-    public void setStudent_id(String student_id) {
-        this.student_id = student_id;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public String getPassword() {
@@ -34,14 +40,12 @@ public class User {
         this.password = password;
     }
 
-    public String getFull_name() {
-        return full_name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFull_name(String full_name) {
-        this.full_name = full_name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
-    
-    
-    
+
 }

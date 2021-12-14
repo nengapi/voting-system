@@ -2,6 +2,8 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.UserModel;
 import view.LoginPage;
 
@@ -27,6 +29,7 @@ public class LoginController implements ActionListener {
         if (e.getSource().equals(view.getLoginBtn())) {
             String username = view.getUsernameTextField().getText();
             String password = view.getPasswordTextField().getText();
+
             if (model.checkUser(username, password)) {
                 view.dispose();
             }

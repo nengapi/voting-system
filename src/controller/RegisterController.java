@@ -2,6 +2,8 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import model.UserModel;
 import view.RegisterPage;
@@ -27,11 +29,12 @@ public class RegisterController implements ActionListener {
             String studentId = view.getStudentIdTextField().getText();
             String password = view.getPasswordTextField().getText();
             String fullName = view.getFullNameTextField().getText();
-            
+
             if (model.insertUser(studentId, password, fullName)) {
                 System.out.println("insert data successful");
                 view.dispose();
             }
+
         }
     }
 }

@@ -39,9 +39,6 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `student_id`, `password`, `fullName`, `isAdmin`) VALUES
-(1, 63070183, 'password', 'apichet komwatcharapong', 0);
-
 --
 -- Indexes for dumped tables
 --
