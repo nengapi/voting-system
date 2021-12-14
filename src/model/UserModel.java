@@ -30,27 +30,24 @@ public class UserModel {
     }
 
     public boolean checkUser(String username, String password) {
-        sql = "SELECT student_id, password FROM users WHERE student_id=? AND password=?";
+        sql = "SELECT student_id, password, isAdmin FROM users WHERE student_id=? AND password=?";
+        user = new User(username, password);
         try {
             check = con.prepareStatement(sql);
-            check.setString(1, username);
-            check.setString(2, password);
+            check.setString(1, user.getStudentId());
+            check.setString(2, new Password(user.getPassword()).getHashPassword());
 
             rs = check.executeQuery();
 
             if (rs != null && rs.next()) {
-                ResultSet isAdmin = con.createStatement().executeQuery("SELECT isAdmin FROM users WHERE student_id='" + username + "'");
                 System.out.println("login successful");
-                if (isAdmin.next()) {
-                    if (isAdmin.getBoolean("isAdmin")) {
-                        AdminPanel ad = new AdminPanel();
-                        ad.setVisible(true);
-                        System.out.println("admin");
-                    } else {
-                        HomePageController hp = new HomePageController();
-//                        hp.setVisible(true);
-                        System.out.println("user");
-                    }
+                if (check.getResultSet().getBoolean("isAdmin")) {
+                    AdminPanel ad = new AdminPanel();
+                    ad.setVisible(true);
+                    System.out.println("admin");
+                } else {
+                    new HomePageController();
+                    System.out.println("user");
                 }
                 return true;
             } else {
@@ -65,20 +62,23 @@ public class UserModel {
 
     public boolean insertUser(String studentId, String password, String fullName) {
         sql = "INSERT INTO users (student_id, password, fullName, created_at) VALUES (?, ?, ?, ?)";
+        user = new User(studentId, password, fullName);
         try {
 
             insert = con.prepareStatement(sql);
 
-            insert.setInt(1, Integer.parseInt(studentId));
-            insert.setString(2, password);
-            insert.setString(3, fullName);
+            insert.setInt(1, user.getStudentIdToInt());
+            insert.setString(2, new Password(user.getPassword()).getHashPassword());
+            insert.setString(3, user.getFullName());
             insert.setTimestamp(4, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));
 
             insert.executeUpdate();
 
             return true;
+
         } catch (SQLException ex) {
-            Logger.getLogger(UserModel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UserModel.class
+                    .getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
