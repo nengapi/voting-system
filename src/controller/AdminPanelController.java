@@ -1,13 +1,12 @@
 package controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import javax.swing.JFrame;
-import model.CandidateModel;
-import view.AdminPanel;
 import java.util.ArrayList;
+import view.AdminPanel;
 import model.Candidate;
 import model.VotingTimeModel;
+import model.CandidateModel;
 
 public class AdminPanelController implements ActionListener {
     private AdminPanel view;
@@ -18,15 +17,18 @@ public class AdminPanelController implements ActionListener {
         view = new AdminPanel();
         candidateModel = new CandidateModel();
         votingTimeModel = new VotingTimeModel();
+        
         view.setVisible(true);
         view.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         view.getAddLeaderBtn().addActionListener(this);
         view.getSetTimeBtn().addActionListener(this);
         
-        ArrayList<Candidate> candidate = candidateModel.getAll();
+        //show all candidate
+        ArrayList<Candidate> candidate = candidateModel.getCandidateList();
         for(int i = 0; i < candidate.size(); i++) {
-            System.out.println(candidate.get(i).getStudent_id()+", "+candidate.get(i).getName());
         }
+        String[] votingTime = votingTimeModel.get().split("/");
+        view.getSetTimeTextField().setText(votingTime[0]);
     }
 
     @Override

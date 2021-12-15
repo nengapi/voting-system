@@ -7,42 +7,56 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class CandidateModel {
-//    private Candidate candidate;
+
+    private Candidate candidate;
+    private ArrayList<Candidate> candidateList;
     private final Connection CONNECT = Connect.ConnectDB();
-    private ResultSet result = null;
     private PreparedStatement stmt = null;
-    
-    public boolean add(String student_id, String name) {
-        String sql = "INSERT INTO Candidate (student_id, name, create_at) VALUES (?, ?, ?)";
+    private ResultSet result = null;
+
+    public CandidateModel() {
+        candidateList = new ArrayList<Candidate>();
+        readCandidate();
+    }
+
+    public ArrayList<Candidate> getCandidateList() {
+        return candidateList;
+    }
+
+    public void setCandidateList(ArrayList<Candidate> candidateList) {
+        this.candidateList = candidateList;
+    }
+
+    public boolean insert(String student_id, String name, String policy) {
+        String sql = "INSERT INTO Candidate (student_id, name, policy, create_at) VALUES (?, ?, ?, ?)";
         try {
             stmt = CONNECT.prepareStatement(sql);
             stmt.setString(1, student_id);
             stmt.setString(2, name);
-            stmt.setTimestamp(3, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));
+            stmt.setString(3, policy);
+            stmt.setTimestamp(4, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));
             stmt.executeUpdate();
             return true;
-        } catch(SQLException e) {
+        } catch (SQLException e) {
+            e.printStackTrace();
             return false;
         }
     }
     
-    public ArrayList<Candidate> getAll() {
+    public void readCandidate() {
         String sql = "SELECT * FROM candidate";
-
         try {
             stmt = CONNECT.prepareStatement(sql);
             result = stmt.executeQuery();
-            
-            ArrayList<Candidate> candidate = new ArrayList<Candidate>();
-            
-            while(result.next()) {
-                candidate.add(new Candidate(result.getString("student_id"), result.getString("name")));
+            while (result!=null && result.next()) {
+                candidate = new Candidate();
+                candidate.setStudentId(result.getString("student_id"));
+                candidate.setName(result.getString("name"));
+                candidate.setPolicy(result.getString("policy"));
+                candidateList.add(candidate);
             }
-            
-            return candidate;
-        } catch(SQLException e) {
-            return null;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-                
     }
 }
