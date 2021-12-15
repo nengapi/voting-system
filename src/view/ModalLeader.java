@@ -4,6 +4,9 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author bridge-ai
@@ -28,10 +31,10 @@ public class ModalLeader extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        usernameTextField = new javax.swing.JTextField();
-        usernameTextField1 = new javax.swing.JTextField();
+        nameTextField = new javax.swing.JTextField();
+        studentIdTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        registerAdmin = new javax.swing.JButton();
+        regisBtn = new javax.swing.JButton();
         loginBtn = new javax.swing.JButton();
         addPicture = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -44,15 +47,15 @@ public class ModalLeader extends javax.swing.JFrame {
 
         jLabel3.setText("รหัสนักศีกษา");
 
-        registerAdmin.setText("ลงทะเบียน");
-        registerAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+        regisBtn.setText("ลงทะเบียน");
+        regisBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                registerAdminMouseClicked(evt);
+                regisBtnMouseClicked(evt);
             }
         });
-        registerAdmin.addActionListener(new java.awt.event.ActionListener() {
+        regisBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerAdminActionPerformed(evt);
+                regisBtnActionPerformed(evt);
             }
         });
 
@@ -94,15 +97,15 @@ public class ModalLeader extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
-                            .addComponent(usernameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(studentIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
-                            .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(loginBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(registerAdmin)
+                        .addComponent(regisBtn)
                         .addGap(70, 70, 70))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -111,13 +114,13 @@ public class ModalLeader extends javax.swing.JFrame {
                 .addContainerGap(45, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(usernameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(studentIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,7 +131,7 @@ public class ModalLeader extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(registerAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(regisBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29))
         );
 
@@ -146,13 +149,13 @@ public class ModalLeader extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void registerAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerAdminMouseClicked
+    private void regisBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regisBtnMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_registerAdminMouseClicked
+    }//GEN-LAST:event_regisBtnMouseClicked
 
-    private void registerAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerAdminActionPerformed
+    private void regisBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regisBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_registerAdminActionPerformed
+    }//GEN-LAST:event_regisBtnActionPerformed
 
     private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
         // TODO add your handling code here:
@@ -201,6 +204,30 @@ public class ModalLeader extends javax.swing.JFrame {
         });
     }
 
+    public JButton getRegisBtn() {
+        return regisBtn;
+    }
+
+    public void setRegisBtn(JButton regisBtn) {
+        this.regisBtn = regisBtn;
+    }
+
+    public JTextField getNameTextField() {
+        return nameTextField;
+    }
+
+    public void setNameTextField(JTextField nameTextField) {
+        this.nameTextField = nameTextField;
+    }
+
+    public JTextField getStudentIdTextField() {
+        return studentIdTextField;
+    }
+
+    public void setStudentIdTextField(JTextField studentIdTextField) {
+        this.studentIdTextField = studentIdTextField;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addPicture;
     private javax.swing.JLabel jLabel1;
@@ -208,8 +235,8 @@ public class ModalLeader extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginBtn;
-    private javax.swing.JButton registerAdmin;
-    private javax.swing.JTextField usernameTextField;
-    private javax.swing.JTextField usernameTextField1;
+    private javax.swing.JTextField nameTextField;
+    private javax.swing.JButton regisBtn;
+    private javax.swing.JTextField studentIdTextField;
     // End of variables declaration//GEN-END:variables
 }

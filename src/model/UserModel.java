@@ -1,13 +1,13 @@
 package model;
 
 import controller.HomePageController;
+import controller.AdminPanelController;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import view.AdminPanel;
 
 public class UserModel {
 
@@ -42,8 +42,7 @@ public class UserModel {
                 System.out.println("login successful");
                 readUserSQL(username);
                 if (check.getResultSet().getBoolean("isAdmin")) {
-                    AdminPanel ad = new AdminPanel();
-                    ad.setVisible(true);
+                    new AdminPanelController();
                     System.out.println("admin");
                 } else {
                     new HomePageController(user);
