@@ -1,6 +1,7 @@
 package controller;
 
 import java.awt.event.*;
+import javax.swing.JOptionPane;
 import model.UserModel;
 import view.LoginPage;
 
@@ -29,6 +30,8 @@ public class LoginController implements ActionListener {
 
             if (model.checkUser(username, password)) {
                 view.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Username or password is incorrect", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } else if (e.getSource().equals(view.getRegisterBtn())) {
             //go to register page
