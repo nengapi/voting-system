@@ -18,7 +18,7 @@ public class UserModel {
     private String sql;
 
     public UserModel() {
-        user = new User("", "", "");
+        user = new User(0, "", "", "");
     }
 
     public User getUser() {
@@ -31,22 +31,22 @@ public class UserModel {
 
     public boolean checkUser(String username, String password) {
         sql = "SELECT student_id, password, isAdmin FROM users WHERE student_id=? AND password=?";
-        user = new User(username, password);
         try {
             check = con.prepareStatement(sql);
-            check.setString(1, user.getStudentId());
-            check.setString(2, new Password(user.getPassword()).getHashPassword());
+            check.setString(1, username);
+            check.setString(2, new HashInput(password).getHashInput());
 
             rs = check.executeQuery();
 
             if (rs != null && rs.next()) {
                 System.out.println("login successful");
+                readUserSQL(username);
                 if (check.getResultSet().getBoolean("isAdmin")) {
                     AdminPanel ad = new AdminPanel();
                     ad.setVisible(true);
                     System.out.println("admin");
                 } else {
-                    new HomePageController();
+                    new HomePageController(user);
                     System.out.println("user");
                 }
                 return true;
@@ -62,14 +62,13 @@ public class UserModel {
 
     public boolean insertUser(String studentId, String password, String fullName) {
         sql = "INSERT INTO users (student_id, password, fullName, created_at) VALUES (?, ?, ?, ?)";
-        user = new User(studentId, password, fullName);
         try {
 
             insert = con.prepareStatement(sql);
 
-            insert.setInt(1, user.getStudentIdToInt());
-            insert.setString(2, new Password(user.getPassword()).getHashPassword());
-            insert.setString(3, user.getFullName());
+            insert.setInt(1, Integer.parseInt(studentId));
+            insert.setString(2, new HashInput(password).getHashInput());
+            insert.setString(3, fullName);
             insert.setTimestamp(4, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));
 
             insert.executeUpdate();
@@ -83,4 +82,21 @@ public class UserModel {
         }
     }
 
+    public void readUserSQL(String username) {
+        sql = "SELECT * FROM users WHERE student_id=?";
+        try {
+            check = con.prepareStatement(sql);
+            check.setString(1, username);
+
+            rs = check.executeQuery();
+
+            if (rs != null && rs.next()) {
+                user.setId(rs.getInt("id"));
+                user.setStudentId(rs.getString("student_id"));
+                user.setFullName(rs.getString("fullName"));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserModel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
