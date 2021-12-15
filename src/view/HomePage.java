@@ -30,7 +30,7 @@ public class HomePage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        desciptionBtn = new javax.swing.JButton();
+        loginBtn = new javax.swing.JButton();
         votingBtn = new javax.swing.JButton();
         studentName = new javax.swing.JLabel();
         studentId = new javax.swing.JLabel();
@@ -44,14 +44,14 @@ public class HomePage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        desciptionBtn.setBackground(new java.awt.Color(255, 255, 255));
-        desciptionBtn.setText("ออกจากระบบ");
-        desciptionBtn.addActionListener(new java.awt.event.ActionListener() {
+        loginBtn.setBackground(new java.awt.Color(255, 255, 255));
+        loginBtn.setText("ออกจากระบบ");
+        loginBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                desciptionBtnActionPerformed(evt);
+                loginBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(desciptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 153, 40));
+        jPanel1.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 153, 40));
 
         votingBtn.setBackground(new java.awt.Color(255, 255, 255));
         votingBtn.setText("เลือกตั้ง");
@@ -103,9 +103,9 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_desciptionBtn1ActionPerformed
 
-    private void desciptionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desciptionBtnActionPerformed
+    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_desciptionBtnActionPerformed
+    }//GEN-LAST:event_loginBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,11 +143,11 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     public JButton getDesciptionBtn() {
-        return desciptionBtn;
+        return loginBtn;
     }
 
     public void setDesciptionBtn(JButton desciptionBtn) {
-        this.desciptionBtn = desciptionBtn;
+        this.loginBtn = desciptionBtn;
     }
 
     public JButton getVotingBtn() {
@@ -175,11 +175,11 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton desciptionBtn;
     private javax.swing.JButton desciptionBtn1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton loginBtn;
     private javax.swing.JLabel studentId;
     private javax.swing.JLabel studentName;
     private javax.swing.JButton votingBtn;
