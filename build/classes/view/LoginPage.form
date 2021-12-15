@@ -47,6 +47,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="registerBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#xe2a;&#xe23;&#xe49;&#xe32;&#xe07;&#xe1a;&#xe31;&#xe0d;&#xe0a;&#xe35;"/>
           </Properties>
           <Events>
@@ -62,7 +65,7 @@
         <Component class="javax.swing.JButton" name="loginBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f5" green="df" red="ab" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#xe25;&#xe07;&#xe0a;&#xe37;&#xe48;&#xe2d;&#xe40;&#xe02;&#xe49;&#xe32;&#xe43;&#xe0a;&#xe49;"/>
           </Properties>

@@ -45,6 +45,7 @@ public class RegisterPage extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -68,6 +69,7 @@ public class RegisterPage extends javax.swing.JFrame {
         jLabel4.setText("ชื่อ-นามสกุล");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
 
+        submitBtn.setBackground(new java.awt.Color(255, 255, 255));
         submitBtn.setText("สร้างบัญชี");
         submitBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -76,6 +78,7 @@ public class RegisterPage extends javax.swing.JFrame {
         });
         jPanel1.add(submitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 410, -1, 40));
 
+        backBtn.setBackground(new java.awt.Color(255, 255, 255));
         backBtn.setText("ย้อนกลับ");
         backBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

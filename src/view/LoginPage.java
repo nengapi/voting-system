@@ -47,6 +47,7 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        registerBtn.setBackground(new java.awt.Color(255, 255, 255));
         registerBtn.setText("สร้างบัญชี");
         registerBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -60,7 +61,7 @@ public class LoginPage extends javax.swing.JFrame {
         });
         jPanel2.add(registerBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, 40));
 
-        loginBtn.setBackground(new java.awt.Color(171, 223, 245));
+        loginBtn.setBackground(new java.awt.Color(255, 255, 255));
         loginBtn.setText("ลงชื่อเข้าใช้");
         loginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
