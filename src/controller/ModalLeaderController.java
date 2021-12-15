@@ -29,6 +29,7 @@ public class ModalLeaderController implements ActionListener {
             
             if(model.insert(student_id, name, policy)) {
                 view.dispose();
+                new AdminPanelController();
                 System.out.println("Candidate was registered successed");
             } else {
                 System.out.println("Candidate was registered failed");

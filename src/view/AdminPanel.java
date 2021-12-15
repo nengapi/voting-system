@@ -8,6 +8,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
@@ -41,7 +42,8 @@ public class AdminPanel extends javax.swing.JFrame {
         setTimeTextField = new javax.swing.JTextField();
         addLeaderBtn = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        candidateTable = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -87,30 +89,48 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jScrollPane2.setBackground(new java.awt.Color(139, 199, 235));
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        candidateTable.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        candidateTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "ลำดับ", "ชื่อ", "นามสกุล", "คะแนน"
+                "ลำดับ", "รหัสนักศึกษา", "ชื่อ นามสกุล", "นโยบาย", "คะแนน"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
-        });
-        jScrollPane2.setViewportView(jTable3);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 610, 390));
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(candidateTable);
+        if (candidateTable.getColumnModel().getColumnCount() > 0) {
+            candidateTable.getColumnModel().getColumn(0).setResizable(false);
+            candidateTable.getColumnModel().getColumn(1).setResizable(false);
+            candidateTable.getColumnModel().getColumn(2).setResizable(false);
+            candidateTable.getColumnModel().getColumn(3).setResizable(false);
+            candidateTable.getColumnModel().getColumn(4).setResizable(false);
+        }
+
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 610, 350));
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel1.setText("ผู้ลงสมัครเลือกตั้ง");
+        jLabel1.setToolTipText("");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/AdminPanal.png"))); // NOI18N
+        jLabel4.setText("ผู้");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -196,16 +216,25 @@ public class AdminPanel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addLeaderBtn;
+    private javax.swing.JTable candidateTable;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable3;
     private javax.swing.JButton logoutBtn;
     private javax.swing.JButton setTimeBtn;
     private javax.swing.JTextField setTimeTextField;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getCandidateTable() {
+        return candidateTable;
+    }
+
+    public void setCandidateTable(JTable candidateTable) {
+        this.candidateTable = candidateTable;
+    }
 
 }

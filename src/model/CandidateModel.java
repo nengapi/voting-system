@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+import view.AdminPanel;
 
 public class CandidateModel {
 
@@ -58,5 +60,20 @@ public class CandidateModel {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    
+    public void renderTable(AdminPanel view) {
+        DefaultTableModel table = (DefaultTableModel) view.getCandidateTable().getModel();
+        table.fireTableDataChanged();
+
+        for (int i = 0; i < candidateList.size(); i++) {
+            table.addRow(new Object[0]);
+            table.setValueAt(i + 1, i, 0);
+            table.setValueAt(candidateList.get(i).getStudentId(), i, 1);
+            table.setValueAt(candidateList.get(i).getName(), i, 2);
+            table.setValueAt(candidateList.get(i).getPolicy(), i, 3);
+            table.setValueAt("-", i, 4);
+        }
+
     }
 }
