@@ -28,8 +28,8 @@ public class AdminPanelController implements ActionListener {
         ArrayList<Candidate> candidate = candidateModel.getCandidateList();
         for(int i = 0; i < candidate.size(); i++) {
         }
-        
-        view.getSetTimeTextField().setText(votingTimeModel.get());
+        String[] votingTime = votingTimeModel.get().split("/");
+        view.getSetTimeTextField().setText(votingTime[0]);
     }
 
     @Override
