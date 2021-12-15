@@ -31,26 +31,38 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         desciptionBtn = new javax.swing.JButton();
-        profileBtn = new javax.swing.JButton();
         votingBtn = new javax.swing.JButton();
+        studentName = new javax.swing.JLabel();
+        studentId = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         desciptionBtn.setBackground(new java.awt.Color(255, 255, 255));
         desciptionBtn.setText("Description");
-        jPanel1.add(desciptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 153, 50));
-
-        profileBtn.setBackground(new java.awt.Color(255, 255, 255));
-        profileBtn.setText("Profile");
-        jPanel1.add(profileBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 153, 50));
+        jPanel1.add(desciptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 153, 50));
 
         votingBtn.setBackground(new java.awt.Color(255, 255, 255));
         votingBtn.setText("Voting");
-        jPanel1.add(votingBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 153, 50));
+        jPanel1.add(votingBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 153, 50));
+
+        studentName.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
+        studentName.setForeground(new java.awt.Color(255, 255, 255));
+        studentName.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
+        jPanel1.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+
+        studentId.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
+        studentId.setForeground(new java.awt.Color(255, 255, 255));
+        studentId.setText("63070121");
+        jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed (1) 1.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Home.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -112,14 +124,6 @@ public class HomePage extends javax.swing.JFrame {
         this.desciptionBtn = desciptionBtn;
     }
 
-    public JButton getProfileBtn() {
-        return profileBtn;
-    }
-
-    public void setProfileBtn(JButton profileBtn) {
-        this.profileBtn = profileBtn;
-    }
-
     public JButton getVotingBtn() {
         return votingBtn;
     }
@@ -131,8 +135,10 @@ public class HomePage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton desciptionBtn;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton profileBtn;
+    private javax.swing.JLabel studentId;
+    private javax.swing.JLabel studentName;
     private javax.swing.JButton votingBtn;
     // End of variables declaration//GEN-END:variables
 }
