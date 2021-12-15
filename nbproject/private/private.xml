@@ -3,8 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/OOP_PROJECT/src/controller/Main.java</file>
-            <file>file:/C:/OOP_PROJECT/src/view/LoginPage.java</file>
+            <file>file:/Users/bridge-ai/Desktop/voting-system/src/view/Description.java</file>
+            <file>file:/Users/bridge-ai/Desktop/voting-system/src/view/HomePage.java</file>
+            <file>file:/Users/bridge-ai/Desktop/voting-system/src/view/AdminPanel.java</file>
+            <file>file:/Users/bridge-ai/Desktop/voting-system/src/view/VotePage.java</file>
+            <file>file:/Users/bridge-ai/Desktop/voting-system/src/view/Profile.java</file>
+            <file>file:/Users/bridge-ai/Desktop/voting-system/src/view/LoginPage.java</file>
+            <file>file:/Users/bridge-ai/Desktop/voting-system/src/view/ModalLeader.java</file>
+            <file>file:/Users/bridge-ai/Desktop/voting-system/src/view/RegisterPage.java</file>
+            <file>file:/Users/bridge-ai/Desktop/voting-system/src/view/Final.java</file>
         </group>
     </open-files>
 </project-private>
