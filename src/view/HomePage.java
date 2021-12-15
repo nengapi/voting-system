@@ -53,13 +53,16 @@ public class HomePage extends javax.swing.JFrame {
 
         studentName.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
         studentName.setForeground(new java.awt.Color(255, 255, 255));
+        studentName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         studentName.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
-        jPanel1.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+        studentName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 220, -1));
 
         studentId.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
         studentId.setForeground(new java.awt.Color(255, 255, 255));
+        studentId.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         studentId.setText("63070121");
-        jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
+        jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 140, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed (1) 1.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
@@ -130,6 +133,22 @@ public class HomePage extends javax.swing.JFrame {
 
     public void setVotingBtn(JButton votingBtn) {
         this.votingBtn = votingBtn;
+    }
+
+    public JLabel getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(JLabel studentId) {
+        this.studentId = studentId;
+    }
+
+    public JLabel getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(JLabel studentName) {
+        this.studentName = studentName;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
