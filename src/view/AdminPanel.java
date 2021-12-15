@@ -98,7 +98,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel3.setBackground(new java.awt.Color(212, 212, 212));
+        jPanel3.setBackground(new java.awt.Color(234, 234, 234));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/logo-KMITL-1-1 (1).jpg"))); // NOI18N
 
