@@ -18,14 +18,15 @@ public class AdminPanelController implements ActionListener {
         view = new AdminPanel();
         candidateModel = new CandidateModel();
         votingTimeModel = new VotingTimeModel();
+        
         view.setVisible(true);
         view.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         view.getAddLeaderBtn().addActionListener(this);
         view.getSetTimeBtn().addActionListener(this);
         
-        ArrayList<Candidate> candidate = candidateModel.getAll();
+        //show all candidate
+        ArrayList<Candidate> candidate = candidateModel.getCandidateList();
         for(int i = 0; i < candidate.size(); i++) {
-            System.out.println(candidate.get(i).getStudent_id()+", "+candidate.get(i).getName());
         }
         
         view.getSetTimeTextField().setText(votingTimeModel.get());
