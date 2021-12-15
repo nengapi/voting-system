@@ -40,7 +40,7 @@ public class Profile extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        closeBtn.setBackground(new java.awt.Color(153, 153, 153));
+        closeBtn.setBackground(new java.awt.Color(255, 255, 255));
         closeBtn.setText("ย้อนกลับ");
         closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

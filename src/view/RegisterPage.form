@@ -119,6 +119,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="submitBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#xe2a;&#xe23;&#xe49;&#xe32;&#xe07;&#xe1a;&#xe31;&#xe0d;&#xe0a;&#xe35;"/>
           </Properties>
           <Events>
@@ -132,6 +135,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="backBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#xe22;&#xe49;&#xe2d;&#xe19;&#xe01;&#xe25;&#xe31;&#xe1a;"/>
           </Properties>
           <Events>
