@@ -6,6 +6,7 @@ package view;
 
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -40,24 +41,14 @@ public class AdminPanel extends javax.swing.JFrame {
         setTimeTextField = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         listBox = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        boxPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        NameLeader = new javax.swing.JLabel();
+        nameLeaderLabel = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        ScrollLeader = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        NameLeader1 = new javax.swing.JLabel();
+        scoreLeaderLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        ScrollLeader1 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        NameLeader2 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        ScrollLeader2 = new javax.swing.JLabel();
+        policyLeaderLabel = new javax.swing.JLabel();
         addLeaderBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,206 +60,85 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel2.setText("ADMIN PANAL");
 
         setTimeBtn.setText("กำหนดเวลาโหวต");
-        setTimeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                setTimeBtnMouseClicked(evt);
-            }
-        });
-        setTimeBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                setTimeBtnActionPerformed(evt);
-            }
-        });
 
         exportBtn.setText("export excel");
-        exportBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                exportBtnMouseClicked(evt);
-            }
-        });
 
         logoutBtn.setText("ออกจากระบบ");
         logoutBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        logoutBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                logoutBtnMouseClicked(evt);
-            }
-        });
-        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logoutBtnActionPerformed(evt);
-            }
-        });
 
         setTimeTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         setTimeTextField.setText("00:00:00");
-        setTimeTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                setTimeTextFieldActionPerformed(evt);
-            }
-        });
 
         jScrollPane2.setHorizontalScrollBar(null);
         jScrollPane2.setName(""); // NOI18N
 
         listBox.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel3.setBackground(new java.awt.Color(234, 234, 234));
+        boxPanel.setBackground(new java.awt.Color(234, 234, 234));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/logo-KMITL-1-1 (1).jpg"))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel3.setText("ผู้ลงสมัครเลือกตั้ง : ");
 
-        NameLeader.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        NameLeader.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
+        nameLeaderLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        nameLeaderLabel.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel6.setText("คะแนนเสียง : ");
+        jLabel6.setText("นโยบาย :");
 
-        ScrollLeader.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        ScrollLeader.setText("30");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(NameLeader))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(ScrollLeader)))
-                .addGap(0, 97, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(NameLeader))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(ScrollLeader))
-                .addContainerGap(45, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jPanel4.setBackground(new java.awt.Color(234, 234, 234));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/logo-KMITL-1-1 (1).jpg"))); // NOI18N
-
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel5.setText("ผู้ลงสมัครเลือกตั้ง : ");
-
-        NameLeader1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        NameLeader1.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
+        scoreLeaderLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        scoreLeaderLabel.setText("30");
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel7.setText("คะแนนเสียง : ");
 
-        ScrollLeader1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        ScrollLeader1.setText("30");
+        policyLeaderLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        policyLeaderLabel.setText("test");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
-                        .addComponent(NameLeader1))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout boxPanelLayout = new javax.swing.GroupLayout(boxPanel);
+        boxPanel.setLayout(boxPanelLayout);
+        boxPanelLayout.setHorizontalGroup(
+            boxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(boxPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(boxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(boxPanelLayout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
-                        .addComponent(ScrollLeader1)))
-                .addGap(0, 97, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(NameLeader1))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(ScrollLeader1))
-                .addContainerGap(45, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jPanel5.setBackground(new java.awt.Color(234, 234, 234));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/logo-KMITL-1-1 (1).jpg"))); // NOI18N
-
-        jLabel9.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel9.setText("ผู้ลงสมัครเลือกตั้ง : ");
-
-        NameLeader2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        NameLeader2.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
-
-        jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel10.setText("คะแนนเสียง : ");
-
-        ScrollLeader2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        ScrollLeader2.setText("30");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
+                        .addComponent(scoreLeaderLabel))
+                    .addGroup(boxPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addComponent(NameLeader2))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
+                        .addComponent(nameLeaderLabel))
+                    .addGroup(boxPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
                         .addGap(18, 18, 18)
-                        .addComponent(ScrollLeader2)))
-                .addGap(0, 77, Short.MAX_VALUE))
+                        .addComponent(policyLeaderLabel)))
+                .addGap(26, 26, 26))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(NameLeader2))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(ScrollLeader2))
-                .addContainerGap(23, Short.MAX_VALUE))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+        boxPanelLayout.setVerticalGroup(
+            boxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, boxPanelLayout.createSequentialGroup()
+                .addGroup(boxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(boxPanelLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(boxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(nameLeaderLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(boxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(scoreLeaderLabel)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addGroup(boxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(policyLeaderLabel)))
+                    .addGroup(boxPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -278,32 +148,20 @@ public class AdminPanel extends javax.swing.JFrame {
             listBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(listBoxLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(listBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(281, Short.MAX_VALUE))
+                .addComponent(boxPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(396, Short.MAX_VALUE))
         );
         listBoxLayout.setVerticalGroup(
             listBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(listBoxLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addComponent(boxPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(279, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(listBox);
 
         addLeaderBtn.setText("เพื่มผู้ลงสมัคร");
-        addLeaderBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addLeaderBtnActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -322,7 +180,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 816, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -331,7 +189,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(setTimeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -365,34 +223,6 @@ public class AdminPanel extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_logoutBtnActionPerformed
-
-    private void setTimeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setTimeTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_setTimeTextFieldActionPerformed
-
-    private void setTimeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_setTimeBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_setTimeBtnMouseClicked
-
-    private void exportBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exportBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_exportBtnMouseClicked
-
-    private void logoutBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_logoutBtnMouseClicked
-
-    private void setTimeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setTimeBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_setTimeBtnActionPerformed
-
-    private void addLeaderBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addLeaderBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addLeaderBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -455,36 +285,57 @@ public class AdminPanel extends javax.swing.JFrame {
     public void setSetTimeTextField(JTextField setTimeTextField) {
         this.setTimeTextField = setTimeTextField;
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel NameLeader;
-    private javax.swing.JLabel NameLeader1;
-    private javax.swing.JLabel NameLeader2;
-    private javax.swing.JLabel ScrollLeader;
-    private javax.swing.JLabel ScrollLeader1;
-    private javax.swing.JLabel ScrollLeader2;
     private javax.swing.JButton addLeaderBtn;
+    private javax.swing.JPanel boxPanel;
     private javax.swing.JButton exportBtn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JPanel listBox;
     private javax.swing.JButton logoutBtn;
+    private javax.swing.JLabel nameLeaderLabel;
+    private javax.swing.JLabel policyLeaderLabel;
+    private javax.swing.JLabel scoreLeaderLabel;
     private javax.swing.JButton setTimeBtn;
     private javax.swing.JTextField setTimeTextField;
     // End of variables declaration//GEN-END:variables
+
+    public JPanel getBoxPanel() {
+        return boxPanel;
+    }
+
+    public void setBoxPanel(JPanel boxPanel) {
+        this.boxPanel = boxPanel;
+    }
+
+    public JLabel getNameLeaderLabel() {
+        return nameLeaderLabel;
+    }
+
+    public void setNameLeaderLabel(JLabel nameLeaderLabel) {
+        this.nameLeaderLabel = nameLeaderLabel;
+    }
+    
+    public JLabel getPolicyLeaderLabel() {
+        return policyLeaderLabel;
+    }
+
+    public void setPolicyLeaderLabel(JLabel policyLeaderLabel) {
+        this.policyLeaderLabel = policyLeaderLabel;
+    }
+    public JLabel getScoreLeaderLabel() {
+        return scoreLeaderLabel;
+    }
+
+    public void setScoreLeaderLabel(JLabel scoreLeaderLabel) {
+        this.scoreLeaderLabel = scoreLeaderLabel;
+    }
 }

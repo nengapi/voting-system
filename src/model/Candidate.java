@@ -1,15 +1,28 @@
 package model;
 
 public class Candidate {
-    private String student_id, name, create_at;
-    
-    public Candidate() {
-        this("", "");
+    private String studentId;
+    private String name;
+    private String policy;
+    private long createdAt;
+
+    public String getPolicy() {
+        return policy;
+    }
+
+    public void setPolicy(String policy) {
+        this.policy = policy;
     }
     
-    public Candidate(String student_id, String name) {
-        this.student_id = student_id;
+    public Candidate() {
+        this("", "", "", 0);
+    }
+    
+    public Candidate(String student_id, String name, String policy, long create_at) {
+        this.studentId = student_id;
         this.name = name;
+        this.policy = policy;
+        this.createdAt = create_at;
     }
 
     public String getName() {
@@ -20,20 +33,26 @@ public class Candidate {
         this.name = name;
     }
 
-    public String getCreate_at() {
-        return create_at;
+    public long getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreate_at(String create_at) {
-        this.create_at = create_at;
+    public void setCreatedAt(long createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public String getStudent_id() {
-        return student_id;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setStudent_id(String student_id) {
-        this.student_id = student_id;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
+
+    @Override
+    public String toString() {
+        return "Candidate{" + "studentId=" + studentId + ", name=" + name + ", policy=" + policy + '}';
+    }
+    
     
 }
