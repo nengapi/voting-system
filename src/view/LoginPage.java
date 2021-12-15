@@ -39,7 +39,6 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         usernameTextField = new javax.swing.JTextField();
         passwordTextField = new javax.swing.JPasswordField();
-        validationShow = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -77,23 +76,19 @@ public class LoginPage extends javax.swing.JFrame {
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("รหัสนักศีกษา");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("รหัสผ่าน");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
 
         usernameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameTextFieldActionPerformed(evt);
             }
         });
-        jPanel2.add(usernameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 310, 40));
-        jPanel2.add(passwordTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 310, 40));
-
-        validationShow.setForeground(new java.awt.Color(255, 51, 51));
-        validationShow.setText("* password is wrong");
-        jPanel2.add(validationShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
+        jPanel2.add(usernameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 310, 40));
+        jPanel2.add(passwordTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 310, 40));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Group 9.png"))); // NOI18N
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 460));
@@ -176,7 +171,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JPasswordField passwordTextField;
     private javax.swing.JButton registerBtn;
     private javax.swing.JTextField usernameTextField;
-    private javax.swing.JLabel validationShow;
     // End of variables declaration//GEN-END:variables
 
     public JButton getRegisterBtn() {

@@ -30,61 +30,15 @@ public class Profile extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        studentId = new javax.swing.JLabel();
-        StudentName = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         closeBtn = new javax.swing.JButton();
+        studentId = new javax.swing.JLabel();
+        studentName = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel2.setText("รหัสนักศีกษา");
-
-        jLabel3.setText("ชื่อ - นามสกุล");
-
-        studentId.setText(": 63070121");
-
-        StudentName.setText(": พิสิฐไชย เรืองวัฒนาพงษ์");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(StudentName))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(studentId)))
-                .addContainerGap(222, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(studentId)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(StudentName)
-                .addContainerGap(37, Short.MAX_VALUE))
-        );
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication1/images/blank-profile-picture-g50f297206_640 (1).png"))); // NOI18N
-        jLabel1.setToolTipText("");
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         closeBtn.setBackground(new java.awt.Color(153, 153, 153));
         closeBtn.setText("ย้อนกลับ");
@@ -98,35 +52,20 @@ public class Profile extends javax.swing.JFrame {
                 closeBtnActionPerformed(evt);
             }
         });
+        jPanel2.add(closeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, 37));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(218, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(309, 309, 309))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(closeBtn)
-                        .addGap(362, 362, 362))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(188, 188, 188))))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(closeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-        );
+        studentId.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        studentId.setForeground(new java.awt.Color(255, 255, 255));
+        studentId.setText("63070121");
+        jPanel2.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, -1, -1));
+
+        studentName.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        studentName.setForeground(new java.awt.Color(255, 255, 255));
+        studentName.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
+        jPanel2.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/profile.png"))); // NOI18N
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -195,11 +134,11 @@ public class Profile extends javax.swing.JFrame {
     }
 
     public JLabel getStudentName() {
-        return StudentName;
+        return studentName;
     }
 
     public void setStudentName(JLabel StudentName) {
-        this.StudentName = StudentName;
+        this.studentName = StudentName;
     }
 
     public JLabel getStudentId() {
@@ -211,13 +150,10 @@ public class Profile extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel StudentName;
     private javax.swing.JButton closeBtn;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel studentId;
+    private javax.swing.JLabel studentName;
     // End of variables declaration//GEN-END:variables
 }
