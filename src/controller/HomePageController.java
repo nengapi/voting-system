@@ -22,6 +22,9 @@ public class HomePageController implements ActionListener {
         view.setVisible(true);
         view.getDesciptionBtn().addActionListener(this);
         view.getVotingBtn().addActionListener(this);
+        
+        view.getStudentName().setText(u.getFullName());
+        view.getStudentId().setText(u.getStudentId());
             
         String[] votingTime = votingTimeModel.get().split("/");
 
