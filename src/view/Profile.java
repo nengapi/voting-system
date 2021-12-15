@@ -52,7 +52,7 @@ public class Profile extends javax.swing.JFrame {
                 closeBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(closeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, 37));
+        jPanel2.add(closeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 100, 37));
 
         studentId.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         studentId.setForeground(new java.awt.Color(255, 255, 255));
@@ -62,7 +62,7 @@ public class Profile extends javax.swing.JFrame {
         studentName.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         studentName.setForeground(new java.awt.Color(255, 255, 255));
         studentName.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
-        jPanel2.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, -1, -1));
+        jPanel2.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/profile.png"))); // NOI18N
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
