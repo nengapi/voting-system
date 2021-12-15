@@ -31,7 +31,7 @@ public class LoginController implements ActionListener {
             if (model.checkUser(username, password)) {
                 view.dispose();
             } else {
-                JOptionPane.showMessageDialog(null, "Username or password is incorrect", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง", "Failed", JOptionPane.ERROR_MESSAGE);
             }
         } else if (e.getSource().equals(view.getRegisterBtn())) {
             //go to register page

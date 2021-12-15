@@ -231,6 +231,14 @@ public class RegisterPage extends javax.swing.JFrame {
         this.passwordTextField = passwordTextField;
     }
 
+    public JButton getBackBtn() {
+        return backBtn;
+    }
+
+    public void setBackBtn(JButton backBtn) {
+        this.backBtn = backBtn;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField StudentIdTextField;
     private javax.swing.JButton backBtn;
