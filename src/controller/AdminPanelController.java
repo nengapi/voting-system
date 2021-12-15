@@ -27,6 +27,8 @@ public class AdminPanelController implements ActionListener {
         for(int i = 0; i < candidate.size(); i++) {
             System.out.println(candidate.get(i).getStudent_id()+", "+candidate.get(i).getName());
         }
+        
+        view.getSetTimeTextField().setText(votingTimeModel.get());
     }
 
     @Override
