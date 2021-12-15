@@ -35,6 +35,7 @@ public class HomePage extends javax.swing.JFrame {
         studentName = new javax.swing.JLabel();
         studentId = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        desciptionBtn1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,28 +45,42 @@ public class HomePage extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         desciptionBtn.setBackground(new java.awt.Color(255, 255, 255));
-        desciptionBtn.setText("Description");
-        jPanel1.add(desciptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 153, 50));
+        desciptionBtn.setText("ออกจากระบบ");
+        desciptionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desciptionBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(desciptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 153, 40));
 
         votingBtn.setBackground(new java.awt.Color(255, 255, 255));
-        votingBtn.setText("Voting");
-        jPanel1.add(votingBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 153, 50));
+        votingBtn.setText("เลือกตั้ง");
+        jPanel1.add(votingBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 153, 40));
 
         studentName.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
         studentName.setForeground(new java.awt.Color(255, 255, 255));
         studentName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         studentName.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
         studentName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 220, -1));
+        jPanel1.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 250, -1));
 
         studentId.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
         studentId.setForeground(new java.awt.Color(255, 255, 255));
         studentId.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         studentId.setText("63070121");
-        jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 140, -1));
+        jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 250, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed (1) 1.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
+
+        desciptionBtn1.setBackground(new java.awt.Color(255, 255, 255));
+        desciptionBtn1.setText("คำแนะนำ");
+        desciptionBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desciptionBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(desciptionBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 153, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Home.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -83,6 +98,14 @@ public class HomePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void desciptionBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desciptionBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desciptionBtn1ActionPerformed
+
+    private void desciptionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desciptionBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desciptionBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,6 +176,7 @@ public class HomePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton desciptionBtn;
+    private javax.swing.JButton desciptionBtn1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

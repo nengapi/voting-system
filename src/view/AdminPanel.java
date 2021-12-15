@@ -179,13 +179,6 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(jTable3);
-        if (jTable3.getColumnModel().getColumnCount() > 0) {
-            jTable3.getColumnModel().getColumn(0).setHeaderValue("ลำดับ");
-            jTable3.getColumnModel().getColumn(1).setHeaderValue("ชื่อ");
-            jTable3.getColumnModel().getColumn(2).setHeaderValue("นามสกุล");
-            jTable3.getColumnModel().getColumn(3).setHeaderValue("คะแนน");
-            jTable3.getColumnModel().getColumn(4).setHeaderValue("รูป");
-        }
 
         javax.swing.GroupLayout listBoxLayout = new javax.swing.GroupLayout(listBox);
         listBox.setLayout(listBoxLayout);
