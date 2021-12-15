@@ -1,13 +1,12 @@
 package controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import javax.swing.JFrame;
-import model.CandidateModel;
-import view.AdminPanel;
 import java.util.ArrayList;
+import view.AdminPanel;
 import model.Candidate;
 import model.VotingTimeModel;
+import model.CandidateModel;
 
 public class AdminPanelController implements ActionListener {
     private AdminPanel view;

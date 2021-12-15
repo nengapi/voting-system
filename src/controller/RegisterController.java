@@ -1,9 +1,6 @@
 package controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.awt.event.*;
 import javax.swing.JFrame;
 import model.UserModel;
 import view.RegisterPage;

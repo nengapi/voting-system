@@ -1,17 +1,12 @@
 package controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.awt.event.*;
+import java.text.*;
 import java.time.Instant;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-import model.User;
+import java.util.logging.*;
 import view.HomePage;
+import model.User;
 import model.VotingTimeModel;
 
 public class HomePageController implements ActionListener {
@@ -23,7 +18,6 @@ public class HomePageController implements ActionListener {
     public HomePageController(User u) {
         votingTimeModel = new VotingTimeModel();
         user = u;
-
         view = new HomePage();
         view.setVisible(true);
         view.getDesciptionBtn().addActionListener(this);

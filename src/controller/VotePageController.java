@@ -1,19 +1,14 @@
 package controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.awt.event.*;
+import java.text.*;
 import java.time.*;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import model.BlockModel;
-import model.User;
+import java.util.logging.*;
+import javax.swing.*;
 import view.VotePage;
+import model.User;
+import model.BlockModel;
 import model.VotingTimeModel;
 
 public class VotePageController implements ActionListener {
