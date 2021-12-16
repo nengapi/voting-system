@@ -52,12 +52,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="&#xe2d;&#xe2d;&#xe01;&#xe23;&#xe30;&#xe1a;&#xe1a;"/>
           </Properties>
-<<<<<<< HEAD
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutBtnActionPerformed"/>
-          </Events>
-=======
->>>>>>> 5e22ffd563245a85423594e3719d64043bce56de
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="50" y="420" width="153" height="40"/>
@@ -137,25 +131,6 @@
             </Constraint>
           </Constraints>
         </Component>
-<<<<<<< HEAD
-        <Component class="javax.swing.JButton" name="desciptionBtn">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="&#xe04;&#xe33;&#xe41;&#xe19;&#xe30;&#xe19;&#xe33;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="desciptionBtnActionPerformed"/>
-          </Events>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="50" y="380" width="153" height="40"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-=======
->>>>>>> 5e22ffd563245a85423594e3719d64043bce56de
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
