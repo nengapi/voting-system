@@ -98,4 +98,20 @@ public class UserModel {
             Logger.getLogger(UserModel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public boolean isVoted() {
+        sql = "SELECT BlockID FROM block WHERE voterID = ?";
+        try {
+            System.out.println("Check isVoted");
+            check = con.prepareStatement(sql);
+            check.setInt(1, user.getId());
+            rs = check.executeQuery();
+            if(rs != null && rs.next()) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserModel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
 }

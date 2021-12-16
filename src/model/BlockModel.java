@@ -63,10 +63,11 @@ public class BlockModel {
         }
     }
 
-    public void insertBlock(int candidate) {
+    public boolean insertBlock(int candidate) {
         readBlock(true);
         sql = "INSERT INTO `block`(`prevBlockID`, `voterID`, `candidate`, `created_at`, `messageHash`, `messagePrevHash`) "
                 + "VALUES (?, ?, ?, ?, ?, ?)";
+        
         try {
             insert = con.prepareStatement(sql);
             insert.setInt(1, singleBlock.getBlockID());
@@ -77,12 +78,13 @@ public class BlockModel {
             insert.setString(6, singleBlock.getMessageHash());
 
             insert.executeUpdate();
-            System.out.println("complete");
+            return true;
 
         } catch (SQLException ex) {
             Logger.getLogger(UserModel.class
                     .getName()).log(Level.SEVERE, null, ex);
         }
+        return false;
     }
 
 }

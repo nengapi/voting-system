@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.logging.*;
 import view.HomePage;
 import model.User;
+import model.UserModel;
 import model.VotingTimeModel;
 
 public class HomePageController implements ActionListener {
@@ -14,10 +15,13 @@ public class HomePageController implements ActionListener {
     private HomePage view;
     private User user;
     private VotingTimeModel votingTimeModel;
+    private UserModel userModel;
     
     public HomePageController(User u) {
         votingTimeModel = new VotingTimeModel();
         user = u;
+        userModel = new UserModel();
+        userModel.setUser(user);
         view = new HomePage();
         view.setVisible(true);
         view.getDesciptionBtn().addActionListener(this);
@@ -46,9 +50,11 @@ public class HomePageController implements ActionListener {
 
         unixTime = Instant.now().getEpochSecond();
 
-        if(unixTime-update_at > voting_time){
+        if(unixTime-update_at > voting_time || userModel.isVoted()){
             view.getVotingBtn().setEnabled(false);
         }
+        
+        System.out.println(u.getStudentId());
     }
     
     @Override
@@ -57,7 +63,7 @@ public class HomePageController implements ActionListener {
             System.out.println("desciption");
             new DescriptionController();
         } else if (e.getSource().equals(view.getVotingBtn())) {
-            new VotePageController(user);
+            new VotePageController(user, view);
         } else if (e.getSource().equals(view.getLogoutBtn())) {
             System.exit(0);
         }
