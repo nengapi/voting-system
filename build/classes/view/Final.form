@@ -100,7 +100,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="logoutBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#xe2d;&#xe2d;&#xe01;&#xe08;&#xe32;&#xe01;&#xe23;&#xe30;&#xe1a;&#xe1a;"/>
           </Properties>

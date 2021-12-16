@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author bridge-ai
@@ -31,7 +33,7 @@ public class Final extends javax.swing.JFrame {
         NameBlock = new javax.swing.JLabel();
         stdBlock = new javax.swing.JLabel();
         score = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        logoutBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,8 +59,8 @@ public class Final extends javax.swing.JFrame {
         score.setText("30");
         jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 350, -1, -1));
 
-        jButton1.setText("ออกจากระบบ");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, 50));
+        logoutBtn.setText("ออกจากระบบ");
+        jPanel1.add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/finalPage.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 480));
@@ -112,12 +114,20 @@ public class Final extends javax.swing.JFrame {
         });
     }
 
+    public JButton getLogoutBtn() {
+        return logoutBtn;
+    }
+
+    public void setLogoutBtn(JButton logoutBtn) {
+        this.logoutBtn = logoutBtn;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel NameBlock;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton logoutBtn;
     private javax.swing.JLabel score;
     private javax.swing.JLabel stdBlock;
     // End of variables declaration//GEN-END:variables

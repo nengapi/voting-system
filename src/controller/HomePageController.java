@@ -27,10 +27,21 @@ public class HomePageController implements ActionListener {
         view.getDesciptionBtn().addActionListener(this);
         view.getVotingBtn().addActionListener(this);
         view.getLogoutBtn().addActionListener(this);
-        
         view.getStudentName().setText(u.getFullName());
         view.getStudentId().setText(u.getStudentId());
-            
+
+        if(this.isTimeOut()){
+            view.dispose();
+            new FinalController();
+        } else if (userModel.isVoted()) {
+            view.getVotingBtn().setEnabled(false);
+        }
+        
+        System.out.println(u.getStudentId());
+    }
+    
+    public boolean isTimeOut() {
+
         String[] votingTime = votingTimeModel.get().split("/");
 
         long voting_time = 0, update_at = 0, unixTime;
@@ -38,7 +49,7 @@ public class HomePageController implements ActionListener {
         try {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             Date date = format.parse(votingTime[1]);
-            update_at = date.getTime()/1000L;
+            update_at = date.getTime() / 1000L;
 
             DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
             Date reference = dateFormat.parse("00:00:00");
@@ -49,12 +60,12 @@ public class HomePageController implements ActionListener {
         }
 
         unixTime = Instant.now().getEpochSecond();
-
-        if(unixTime-update_at > voting_time || userModel.isVoted()){
-            view.getVotingBtn().setEnabled(false);
+        
+        if (unixTime - update_at > voting_time) {
+            return true;
         }
         
-        System.out.println(u.getStudentId());
+        return false;
     }
     
     @Override

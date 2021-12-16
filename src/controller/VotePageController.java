@@ -48,31 +48,40 @@ public class VotePageController implements ActionListener {
         renderList(candidate);
 
     }
+    
+    public boolean isTimeOut() {
+
+        String[] votingTime = votingTimeModel.get().split("/");
+
+        long voting_time = 0, update_at = 0, unixTime;
+
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Date date = format.parse(votingTime[1]);
+            update_at = date.getTime() / 1000L;
+
+            DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+            Date reference = dateFormat.parse("00:00:00");
+            date = dateFormat.parse(votingTime[0]);
+            voting_time = (date.getTime() - reference.getTime()) / 1000L;
+        } catch (ParseException ex) {
+            Logger.getLogger(VotePageController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        unixTime = Instant.now().getEpochSecond();
+        
+        if (unixTime - update_at > voting_time) {
+            return true;
+        }
+        
+        return false;
+    }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource().equals(view.getConfirmBtn())) {
 
-            String[] votingTime = votingTimeModel.get().split("/");
-
-            long voting_time = 0, update_at = 0, unixTime;
-
-            try {
-                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                Date date = format.parse(votingTime[1]);
-                update_at = date.getTime() / 1000L;
-
-                DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-                Date reference = dateFormat.parse("00:00:00");
-                date = dateFormat.parse(votingTime[0]);
-                voting_time = (date.getTime() - reference.getTime()) / 1000L;
-            } catch (ParseException ex) {
-                Logger.getLogger(VotePageController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            unixTime = Instant.now().getEpochSecond();
-
-            if (unixTime - update_at <= voting_time && !userModel.isVoted() && view.getCandidateList().getSelectedIndex() > -1) {
+            if (!this.isTimeOut() && !userModel.isVoted() && view.getCandidateList().getSelectedIndex() > -1) {
                 if(block.insertBlock(view.getCandidateList().getSelectedIndex())) {
                     homePageView.getVotingBtn().setEnabled(false);
                     view.dispose();
@@ -80,10 +89,12 @@ public class VotePageController implements ActionListener {
                 } else {
                     JOptionPane.showMessageDialog(null, "ลงคะแนนเสียงไม่สำเร็จ", "Successfully", JOptionPane.ERROR_MESSAGE);
                 }
-            } else if (unixTime - update_at > voting_time) {
+            } else if (this.isTimeOut()) {
+                homePageView.getVotingBtn().setEnabled(false);
                 view.dispose();
                 JOptionPane.showMessageDialog(null, "หมดเวลาลงคะแนน", "Alert", JOptionPane.ERROR_MESSAGE);
             } else if (userModel.isVoted()) {
+                homePageView.getVotingBtn().setEnabled(false);
                 view.dispose();
                 JOptionPane.showMessageDialog(null, "บัญชีนี้มีการลงคะแนนไปแล้ว", "Alert", JOptionPane.ERROR_MESSAGE);
             } else if (view.getCandidateList().getSelectedIndex() < 0) {
@@ -92,27 +103,8 @@ public class VotePageController implements ActionListener {
                 JOptionPane.showMessageDialog(null, "ข้อผิดพลาดที่ไม่รู้จัก", "Alert", JOptionPane.ERROR_MESSAGE);
             }
         } else if (ae.getSource().equals(view.getUnAcceptBtn())) {
-            
-            String[] votingTime = votingTimeModel.get().split("/");
 
-            long voting_time = 0, update_at = 0, unixTime;
-
-            try {
-                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                Date date = format.parse(votingTime[1]);
-                update_at = date.getTime() / 1000L;
-
-                DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-                Date reference = dateFormat.parse("00:00:00");
-                date = dateFormat.parse(votingTime[0]);
-                voting_time = (date.getTime() - reference.getTime()) / 1000L;
-            } catch (ParseException ex) {
-                Logger.getLogger(VotePageController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            unixTime = Instant.now().getEpochSecond();
-
-            if (unixTime - update_at <= voting_time && !userModel.isVoted()) {
+            if (!this.isTimeOut() && !userModel.isVoted()) {
                 if(block.insertBlock(-1)) {
                     homePageView.getVotingBtn().setEnabled(false);
                     view.dispose();
@@ -120,10 +112,12 @@ public class VotePageController implements ActionListener {
                 } else {
                     JOptionPane.showMessageDialog(null, "บันทึกรายการไม่ประสงค์ลงคะแนนไม่สำเร็จ", "Successfully", JOptionPane.ERROR_MESSAGE);
                 }
-            } else if (unixTime - update_at > voting_time) {
+            } else if (this.isTimeOut()) {
+                homePageView.getVotingBtn().setEnabled(false);
                 view.dispose();
                 JOptionPane.showMessageDialog(null, "หมดเวลาลงคะแนน", "Alert", JOptionPane.ERROR_MESSAGE);
             } else if (userModel.isVoted()) {
+                homePageView.getVotingBtn().setEnabled(false);
                 view.dispose();
                 JOptionPane.showMessageDialog(null, "บัญชีนี้มีการลงคะแนนไปแล้ว", "Alert", JOptionPane.ERROR_MESSAGE);
             } else {

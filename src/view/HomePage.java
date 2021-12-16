@@ -46,33 +46,38 @@ public class HomePage extends javax.swing.JFrame {
 
         logoutBtn.setBackground(new java.awt.Color(255, 255, 255));
         logoutBtn.setText("ออกระบบ");
-        jPanel1.add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 153, 40));
+        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 170, 50));
 
         descriptionBtn.setBackground(new java.awt.Color(255, 255, 255));
         descriptionBtn.setText("คำแนะนำ");
-        jPanel1.add(descriptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 153, 40));
+        jPanel1.add(descriptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, 170, 50));
 
         votingBtn.setBackground(new java.awt.Color(255, 255, 255));
         votingBtn.setText("เลือกตั้ง");
-        jPanel1.add(votingBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 153, 40));
+        jPanel1.add(votingBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 170, 50));
 
-        studentName.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
+        studentName.setFont(new java.awt.Font("Lucida Grande", 0, 38)); // NOI18N
         studentName.setForeground(new java.awt.Color(255, 255, 255));
         studentName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         studentName.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
         studentName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 250, -1));
+        jPanel1.add(studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 490, -1));
 
-        studentId.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
+        studentId.setFont(new java.awt.Font("Lucida Grande", 0, 38)); // NOI18N
         studentId.setForeground(new java.awt.Color(255, 255, 255));
         studentId.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         studentId.setText("63070121");
-        jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 250, -1));
+        jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 490, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed (1) 1.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed2.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Home.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/home page.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -88,6 +93,10 @@ public class HomePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logoutBtnActionPerformed
 
     /**
      * @param args the command line arguments
