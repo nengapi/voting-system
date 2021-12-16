@@ -32,7 +32,6 @@ public class Final extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         NameBlock = new javax.swing.JLabel();
         stdBlock = new javax.swing.JLabel();
-        score = new javax.swing.JLabel();
         logoutBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -46,21 +45,19 @@ public class Final extends javax.swing.JFrame {
 
         NameBlock.setFont(new java.awt.Font("Lucida Grande", 0, 30)); // NOI18N
         NameBlock.setForeground(new java.awt.Color(255, 255, 255));
+        NameBlock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         NameBlock.setText("พิสิฐไชย เรืองวัฒนาพงษ์");
-        jPanel1.add(NameBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
+        jPanel1.add(NameBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 300, 830, -1));
 
         stdBlock.setFont(new java.awt.Font("Lucida Grande", 0, 30)); // NOI18N
         stdBlock.setForeground(new java.awt.Color(255, 255, 255));
+        stdBlock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stdBlock.setText("63070121");
-        jPanel1.add(stdBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, -1, -1));
+        jPanel1.add(stdBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 840, -1));
 
-        score.setFont(new java.awt.Font("Lucida Grande", 0, 30)); // NOI18N
-        score.setForeground(new java.awt.Color(255, 255, 255));
-        score.setText("30");
-        jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 350, -1, -1));
-
+        logoutBtn.setBackground(new java.awt.Color(255, 255, 255));
         logoutBtn.setText("ออกจากระบบ");
-        jPanel1.add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, 50));
+        jPanel1.add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, -1, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/finalPage.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 480));
