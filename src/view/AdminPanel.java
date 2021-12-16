@@ -67,7 +67,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         setTimeBtn.setBackground(new java.awt.Color(255, 255, 255));
         setTimeBtn.setText("กำหนดเวลาโหวต");
-        jPanel2.add(setTimeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 120, -1, 37));
+        jPanel2.add(setTimeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 170, -1, 37));
 
         logoutBtn.setBackground(new java.awt.Color(255, 255, 255));
         logoutBtn.setText("ออกจากระบบ");
@@ -76,7 +76,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         setTimeTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         setTimeTextField.setText("00:00:00");
-        jPanel2.add(setTimeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, 138, 40));
+        jPanel2.add(setTimeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 120, 138, 40));
 
         addLeaderBtn.setBackground(new java.awt.Color(255, 255, 255));
         addLeaderBtn.setText("เพื่มผู้ลงสมัคร");
