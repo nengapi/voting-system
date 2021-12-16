@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 public class BlockModel {
 
     private ArrayList<Block> block;
+    private Block singleBlock;
     private final Connection con = Connect.ConnectDB();
     private ResultSet rs = null;
     private PreparedStatement check = null, insert = null;
@@ -19,27 +20,49 @@ public class BlockModel {
 
     public BlockModel(User u) {
         user = u;
-
-        block = new ArrayList<>();
+        block = new ArrayList<Block>();
+        readBlock(false);
     }
 
-    public void readBlock() {
+    public void readBlock(boolean single) {
+        if (single) {
+            sql = "SELECT * FROM block ORDER BY BlockID DESC LIMIT 1";
+        } else {
+            sql = "SELECT * FROM block";
+        }
+        try {
+            check = con.prepareStatement(sql);
 
+            rs = check.executeQuery();
+
+            if (rs != null && rs.next()) {
+                singleBlock = new Block();
+                singleBlock.setBlockID(rs.getInt("BlockID"));
+                singleBlock.setPrevBlockID(rs.getInt("prevBlockID"));
+                singleBlock.setVoterID(rs.getInt("voterID"));
+                singleBlock.setCandidate(rs.getInt("candidate"));
+                singleBlock.setTimeStamp(rs.getTimestamp("created_at"));
+                singleBlock.setMessageHash(rs.getString("messageHash"));
+                singleBlock.setMessagePrevHash(rs.getString("messagePrevHash"));
+                block.add(singleBlock);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserModel.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
-    public void insertBlock() {
+    public void insertBlock(int candidate) {
+        readBlock(true);
         sql = "INSERT INTO `block`(`prevBlockID`, `voterID`, `candidate`, `created_at`, `messageHash`, `messagePrevHash`) "
                 + "VALUES (?, ?, ?, ?, ?, ?)";
         try {
-
             insert = con.prepareStatement(sql);
-
-            insert.setNull(1, 1);
+            insert.setInt(1, singleBlock.getBlockID());
             insert.setInt(2, user.getId());
-            insert.setInt(3, 1);
+            insert.setInt(3, candidate + 1);
             insert.setTimestamp(4, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));
-            insert.setString(5, new HashInput("0").getHashInput());
-            insert.setNull(6, 6);
+            insert.setString(5, new HashInput(singleBlock.getMessageHash()).getHashInput());
+            insert.setString(6, singleBlock.getMessageHash());
 
             insert.executeUpdate();
             System.out.println("complete");
@@ -49,4 +72,5 @@ public class BlockModel {
                     .getName()).log(Level.SEVERE, null, ex);
         }
     }
+
 }

@@ -77,9 +77,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="&#xe01;&#xe33;&#xe2b;&#xe19;&#xe14;&#xe40;&#xe27;&#xe25;&#xe32;&#xe42;&#xe2b;&#xe27;&#xe15;"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="setTimeBtnActionPerformed"/>
-          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="660" y="120" width="-1" height="37"/>

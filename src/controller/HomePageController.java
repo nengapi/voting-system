@@ -53,6 +53,7 @@ public class HomePageController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(view.getDesciptionBtn())) {
+            System.out.println("desciption");
             new DescriptionController();
         } else if (e.getSource().equals(view.getVotingBtn())) {
             new VotePageController(user);

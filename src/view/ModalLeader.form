@@ -131,10 +131,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="&#xe25;&#xe07;&#xe17;&#xe30;&#xe40;&#xe1a;&#xe35;&#xe22;&#xe19;"/>
           </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="regisBtnMouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="regisBtnActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="cancelBtn">
           <Properties>
@@ -143,10 +139,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="&#xe22;&#xe01;&#xe40;&#xe25;&#xe34;&#xe01;"/>
           </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cancelBtnMouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelBtnActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="addPicture">
           <Properties>
@@ -155,9 +147,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="&#xe23;&#xe39;&#xe1b;&#xe20;&#xe32;&#xe1e;"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPictureActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>

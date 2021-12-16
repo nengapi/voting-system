@@ -5,8 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import javax.swing.table.DefaultTableModel;
-import view.AdminPanel;
 
 public class CandidateModel {
 
@@ -44,13 +42,13 @@ public class CandidateModel {
             return false;
         }
     }
-    
+
     public void readCandidate() {
         String sql = "SELECT * FROM candidate";
         try {
             stmt = CONNECT.prepareStatement(sql);
             result = stmt.executeQuery();
-            while (result!=null && result.next()) {
+            while (result != null && result.next()) {
                 candidate = new Candidate();
                 candidate.setStudentId(result.getString("student_id"));
                 candidate.setName(result.getString("name"));
@@ -61,19 +59,5 @@ public class CandidateModel {
             e.printStackTrace();
         }
     }
-    
-    public void renderTable(AdminPanel view) {
-        DefaultTableModel table = (DefaultTableModel) view.getCandidateTable().getModel();
-        table.fireTableDataChanged();
 
-        for (int i = 0; i < candidateList.size(); i++) {
-            table.addRow(new Object[0]);
-            table.setValueAt(i + 1, i, 0);
-            table.setValueAt(candidateList.get(i).getStudentId(), i, 1);
-            table.setValueAt(candidateList.get(i).getName(), i, 2);
-            table.setValueAt(candidateList.get(i).getPolicy(), i, 3);
-            table.setValueAt("-", i, 4);
-        }
-
-    }
 }

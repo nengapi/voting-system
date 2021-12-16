@@ -1,20 +1,22 @@
 
 package model;
 
+import java.util.Date;
+
 public class Block {
     private int blockID;
     private int prevBlockID;
     private int voterID;
     private int candidate;
-    private long timeStamp;
+    private Date timeStamp;
     private String messageHash;
     private String messagePrevHash;
 
     public Block() {
-        this(0, 0, 0, 0, 0, "", "");
+        this(0, 0, 0, 0, null, "", "");
     }
 
-    public Block(int blockID, int prevBlockID, int voterID, int candidate, long timeStamp, String messageHash, String messagePrevHash) {
+    public Block(int blockID, int prevBlockID, int voterID, int candidate, Date timeStamp, String messageHash, String messagePrevHash) {
         this.blockID = blockID;
         this.prevBlockID = prevBlockID;
         this.voterID = voterID;
@@ -56,11 +58,11 @@ public class Block {
         this.candidate = candidate;
     }
 
-    public long getTimeStamp() {
+    public Date getTimeStamp() {
         return timeStamp;
     }
 
-    public void setTimeStamp(long timeStamp) {
+    public void setTimeStamp(Date timeStamp) {
         this.timeStamp = timeStamp;
     }
 

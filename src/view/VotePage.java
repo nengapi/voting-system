@@ -5,6 +5,7 @@
 package view;
 
 import javax.swing.JButton;
+import javax.swing.JList;
 
 /**
  *
@@ -28,10 +29,12 @@ public class VotePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        selectBtn = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        ConfirmBtn = new javax.swing.JButton();
+        confirmBtn = new javax.swing.JButton();
         unAcceptBtn = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        candidateList = new javax.swing.JList<>();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,28 +43,29 @@ public class VotePage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ConfirmBtn.setBackground(new java.awt.Color(255, 255, 255));
-        ConfirmBtn.setText("ยืนยัน");
-        ConfirmBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ConfirmBtnMouseClicked(evt);
-            }
-        });
-        jPanel1.add(ConfirmBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, 130, 40));
+        confirmBtn.setBackground(new java.awt.Color(255, 255, 255));
+        confirmBtn.setText("ยืนยัน");
+        jPanel1.add(confirmBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, 130, 40));
 
         unAcceptBtn.setBackground(new java.awt.Color(255, 255, 255));
         unAcceptBtn.setText("ไม่ลงคะแนนเสียง");
-        unAcceptBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                unAcceptBtnMouseClicked(evt);
-            }
-        });
-        unAcceptBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unAcceptBtnActionPerformed(evt);
-            }
-        });
         jPanel1.add(unAcceptBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 420, 130, 40));
+
+        candidateList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane1.setViewportView(candidateList);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 550, 360));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/votePage.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -79,18 +83,6 @@ public class VotePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ConfirmBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ConfirmBtnMouseClicked
-
-    private void unAcceptBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unAcceptBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_unAcceptBtnMouseClicked
-
-    private void unAcceptBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unAcceptBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_unAcceptBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,18 +120,36 @@ public class VotePage extends javax.swing.JFrame {
     }
 
     public JButton getConfirmBtn() {
-        return ConfirmBtn;
+        return confirmBtn;
     }
 
     public void setConfirmBtn(JButton ConfirmBtn) {
-        this.ConfirmBtn = ConfirmBtn;
+        this.confirmBtn = ConfirmBtn;
+    }
+
+    public JList<String> getCandidateList() {
+        return candidateList;
+    }
+
+    public void setCandidateList(JList<String> candidateList) {
+        this.candidateList = candidateList;
+    }
+
+    public JButton getUnAcceptBtn() {
+        return unAcceptBtn;
+    }
+
+    public void setUnAcceptBtn(JButton unAcceptBtn) {
+        this.unAcceptBtn = unAcceptBtn;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ConfirmBtn;
+    private javax.swing.JList<String> candidateList;
+    private javax.swing.JButton confirmBtn;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.ButtonGroup selectBtn;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton unAcceptBtn;
     // End of variables declaration//GEN-END:variables
 }

@@ -67,11 +67,6 @@ public class AdminPanel extends javax.swing.JFrame {
 
         setTimeBtn.setBackground(new java.awt.Color(255, 255, 255));
         setTimeBtn.setText("กำหนดเวลาโหวต");
-        setTimeBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                setTimeBtnActionPerformed(evt);
-            }
-        });
         jPanel2.add(setTimeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 120, -1, 37));
 
         logoutBtn.setBackground(new java.awt.Color(255, 255, 255));
@@ -146,10 +141,6 @@ public class AdminPanel extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void setTimeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setTimeBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_setTimeBtnActionPerformed
 
     /**
      * @param args the command line arguments

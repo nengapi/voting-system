@@ -49,30 +49,10 @@ public class LoginPage extends javax.swing.JFrame {
 
         registerBtn.setBackground(new java.awt.Color(255, 255, 255));
         registerBtn.setText("สร้างบัญชี");
-        registerBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                registerBtnMouseClicked(evt);
-            }
-        });
-        registerBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerBtnActionPerformed(evt);
-            }
-        });
         jPanel2.add(registerBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, 40));
 
         loginBtn.setBackground(new java.awt.Color(255, 255, 255));
         loginBtn.setText("ลงชื่อเข้าใช้");
-        loginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                loginBtnMouseClicked(evt);
-            }
-        });
-        loginBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginBtnActionPerformed(evt);
-            }
-        });
         jPanel2.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, 40));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -107,22 +87,6 @@ public class LoginPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginBtnActionPerformed
-
-    private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginBtnMouseClicked
-
-    private void registerBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_registerBtnMouseClicked
-
-    private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_registerBtnActionPerformed
 
     private void usernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextFieldActionPerformed
         // TODO add your handling code here:
