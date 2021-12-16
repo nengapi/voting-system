@@ -193,6 +193,14 @@ public class AdminPanel extends javax.swing.JFrame {
         this.setTimeTextField = setTimeTextField;
     }
 
+    public JButton getLogoutBtn() {
+        return logoutBtn;
+    }
+
+    public void setLogoutBtn(JButton logoutBtn) {
+        this.logoutBtn = logoutBtn;
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addLeaderBtn;
