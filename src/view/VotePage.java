@@ -35,7 +35,7 @@ public class VotePage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         candidateList = new javax.swing.JList<>();
-        jLabel3 = new javax.swing.JLabel();
+        votingLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -67,8 +67,8 @@ public class VotePage extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 550, 360));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/votePage.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        votingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/votePage.png"))); // NOI18N
+        jPanel1.add(votingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -146,10 +146,10 @@ public class VotePage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> candidateList;
     private javax.swing.JButton confirmBtn;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton unAcceptBtn;
+    private javax.swing.JLabel votingLabel;
     // End of variables declaration//GEN-END:variables
 }

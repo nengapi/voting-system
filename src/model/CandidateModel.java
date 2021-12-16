@@ -60,4 +60,23 @@ public class CandidateModel {
         }
     }
 
+    public Candidate readWinner(int id) {
+        String sql = "SELECT * FROM candidate WHERE id=?";
+        try {
+            stmt = CONNECT.prepareStatement(sql);
+            stmt.setInt(1, id + 1);
+            result = stmt.executeQuery();
+            if (result != null && result.next()) {
+                candidate = new Candidate();
+                candidate.setStudentId(result.getString("student_id"));
+                candidate.setName(result.getString("name"));
+                candidate.setPolicy(result.getString("policy"));
+            }
+            return candidate;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

@@ -30,24 +30,24 @@ public class ModalLeader extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
         nameTextField = new javax.swing.JTextField();
         studentIdTextField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        studentIdLabel = new javax.swing.JLabel();
         regisBtn = new javax.swing.JButton();
         cancelBtn = new javax.swing.JButton();
         policyTextField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        policyLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(38, 38, 38));
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("ชื่อ-นามสกุล");
+        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel.setText("ชื่อ-นามสกุล");
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("รหัสนักศีกษา");
+        studentIdLabel.setForeground(new java.awt.Color(255, 255, 255));
+        studentIdLabel.setText("รหัสนักศีกษา");
 
         regisBtn.setBackground(new java.awt.Color(255, 255, 255));
         regisBtn.setText("ลงทะเบียน");
@@ -55,8 +55,8 @@ public class ModalLeader extends javax.swing.JFrame {
         cancelBtn.setBackground(new java.awt.Color(255, 255, 255));
         cancelBtn.setText("ยกเลิก");
 
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("นโยบาย");
+        policyLabel.setForeground(new java.awt.Color(255, 255, 255));
+        policyLabel.setText("นโยบาย");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -65,10 +65,10 @@ public class ModalLeader extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(117, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
+                    .addComponent(nameLabel)
+                    .addComponent(policyLabel)
                     .addComponent(policyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
+                    .addComponent(studentIdLabel)
                     .addComponent(studentIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -82,15 +82,15 @@ public class ModalLeader extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(nameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(studentIdLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(studentIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(jLabel4)
+                .addComponent(policyLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(policyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
@@ -182,13 +182,13 @@ public class ModalLeader extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelBtn;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JTextField nameTextField;
+    private javax.swing.JLabel policyLabel;
     private javax.swing.JTextField policyTextField;
     private javax.swing.JButton regisBtn;
+    private javax.swing.JLabel studentIdLabel;
     private javax.swing.JTextField studentIdTextField;
     // End of variables declaration//GEN-END:variables
 

@@ -35,8 +35,8 @@ public class HomePage extends javax.swing.JFrame {
         votingBtn = new javax.swing.JButton();
         studentName = new javax.swing.JLabel();
         studentId = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        picprofileLabel = new javax.swing.JLabel();
+        profileLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -74,11 +74,11 @@ public class HomePage extends javax.swing.JFrame {
         studentId.setText("63070121");
         jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 490, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed2.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
+        picprofileLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed2.png"))); // NOI18N
+        jPanel1.add(picprofileLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/home page.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        profileLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/home page.png"))); // NOI18N
+        jPanel1.add(profileLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -175,10 +175,10 @@ public class HomePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton descriptionBtn;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton logoutBtn;
+    private javax.swing.JLabel picprofileLabel;
+    private javax.swing.JLabel profileLabel;
     private javax.swing.JLabel studentId;
     private javax.swing.JLabel studentName;
     private javax.swing.JButton votingBtn;

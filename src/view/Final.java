@@ -5,6 +5,7 @@
 package view;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -29,38 +30,36 @@ public class Final extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        NameBlock = new javax.swing.JLabel();
+        pictureLabel = new javax.swing.JLabel();
+        nameBlock = new javax.swing.JLabel();
         stdBlock = new javax.swing.JLabel();
         logoutBtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        winnerLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed2.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
+        pictureLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed2.png"))); // NOI18N
+        jPanel1.add(pictureLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
-        NameBlock.setFont(new java.awt.Font("Lucida Grande", 0, 30)); // NOI18N
-        NameBlock.setForeground(new java.awt.Color(255, 255, 255));
-        NameBlock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        NameBlock.setText("ชัชชาติ สิทธิพันธุ์");
-        jPanel1.add(NameBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 300, 830, -1));
+        nameBlock.setFont(new java.awt.Font("Lucida Grande", 0, 30)); // NOI18N
+        nameBlock.setForeground(new java.awt.Color(255, 255, 255));
+        nameBlock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(nameBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 300, 830, -1));
 
         stdBlock.setFont(new java.awt.Font("Lucida Grande", 0, 30)); // NOI18N
         stdBlock.setForeground(new java.awt.Color(255, 255, 255));
         stdBlock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        stdBlock.setText("64070002");
         jPanel1.add(stdBlock, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 840, -1));
 
         logoutBtn.setBackground(new java.awt.Color(255, 255, 255));
         logoutBtn.setText("ออกจากระบบ");
         jPanel1.add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/finalPage.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 480));
+        winnerLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/finalPage.png"))); // NOI18N
+        jPanel1.add(winnerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 480));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,11 +119,27 @@ public class Final extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel NameBlock;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton logoutBtn;
+    private javax.swing.JLabel nameBlock;
+    private javax.swing.JLabel pictureLabel;
     private javax.swing.JLabel stdBlock;
+    private javax.swing.JLabel winnerLabel;
     // End of variables declaration//GEN-END:variables
+
+    public JLabel getNameBlock() {
+        return nameBlock;
+    }
+
+    public void setNameBlock(JLabel nameBlock) {
+        this.nameBlock = nameBlock;
+    }
+
+    public JLabel getStdBlock() {
+        return stdBlock;
+    }
+
+    public void setStdBlock(JLabel stdBlock) {
+        this.stdBlock = stdBlock;
+    }
 }

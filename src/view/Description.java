@@ -29,7 +29,7 @@ public class Description extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         backBtn = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        suggestLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -46,8 +46,8 @@ public class Description extends javax.swing.JFrame {
         });
         jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(701, 415, 110, 40));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/recommen.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        suggestLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/recommen.png"))); // NOI18N
+        jPanel1.add(suggestLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,7 +113,7 @@ public class Description extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel suggestLabel;
     // End of variables declaration//GEN-END:variables
 }

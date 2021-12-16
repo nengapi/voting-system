@@ -35,11 +35,11 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         registerBtn = new javax.swing.JButton();
         loginBtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        stuIdLabel = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
         usernameTextField = new javax.swing.JTextField();
         passwordTextField = new javax.swing.JPasswordField();
-        jLabel4 = new javax.swing.JLabel();
+        loginPageLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -55,13 +55,13 @@ public class LoginPage extends javax.swing.JFrame {
         loginBtn.setText("ลงชื่อเข้าใช้");
         jPanel2.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, 40));
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("รหัสนักศีกษา");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
+        stuIdLabel.setForeground(new java.awt.Color(255, 255, 255));
+        stuIdLabel.setText("รหัสนักศีกษา");
+        jPanel2.add(stuIdLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("รหัสผ่าน");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
+        passwordLabel.setForeground(new java.awt.Color(255, 255, 255));
+        passwordLabel.setText("รหัสผ่าน");
+        jPanel2.add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
 
         usernameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,8 +71,8 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel2.add(usernameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 310, 40));
         jPanel2.add(passwordTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 310, 40));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Group 9.png"))); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 460));
+        loginPageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Group 9.png"))); // NOI18N
+        jPanel2.add(loginPageLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,13 +128,13 @@ public class LoginPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton loginBtn;
+    private javax.swing.JLabel loginPageLabel;
+    private javax.swing.JLabel passwordLabel;
     private javax.swing.JPasswordField passwordTextField;
     private javax.swing.JButton registerBtn;
+    private javax.swing.JLabel stuIdLabel;
     private javax.swing.JTextField usernameTextField;
     // End of variables declaration//GEN-END:variables
 
@@ -160,30 +160,6 @@ public class LoginPage extends javax.swing.JFrame {
 
     public void setLoginBtn(JButton loginBtn) {
         this.loginBtn = loginBtn;
-    }
-
-    public JLabel getjLabel2() {
-        return jLabel2;
-    }
-
-    public void setjLabel2(JLabel jLabel2) {
-        this.jLabel2 = jLabel2;
-    }
-
-    public JLabel getjLabel3() {
-        return jLabel3;
-    }
-
-    public void setjLabel3(JLabel jLabel3) {
-        this.jLabel3 = jLabel3;
-    }
-
-    public JPanel getjPanel2() {
-        return jPanel2;
-    }
-
-    public void setjPanel2(JPanel jPanel2) {
-        this.jPanel2 = jPanel2;
     }
 
     public JTextField getUsernameTextField() {

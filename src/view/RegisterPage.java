@@ -32,17 +32,17 @@ public class RegisterPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        regisPicture = new javax.swing.JLabel();
         StudentIdTextField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        stIdRegisLabel = new javax.swing.JLabel();
+        passRegisLabel = new javax.swing.JLabel();
         passwordTextField = new javax.swing.JTextField();
         fullNameTextField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        nameRegisLabel = new javax.swing.JLabel();
         submitBtn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        regisTextLabel = new javax.swing.JLabel();
+        registratioinLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -50,24 +50,24 @@ public class RegisterPage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed (1) 1.png"))); // NOI18N
-        jLabel1.setToolTipText("");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, -1, -1));
+        regisPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed (1) 1.png"))); // NOI18N
+        regisPicture.setToolTipText("");
+        jPanel1.add(regisPicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, -1, -1));
         jPanel1.add(StudentIdTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 320, 35));
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("รหัสนักศีกษา");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
+        stIdRegisLabel.setForeground(new java.awt.Color(255, 255, 255));
+        stIdRegisLabel.setText("รหัสนักศีกษา");
+        jPanel1.add(stIdRegisLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("รหัสผ่าน");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
+        passRegisLabel.setForeground(new java.awt.Color(255, 255, 255));
+        passRegisLabel.setText("รหัสผ่าน");
+        jPanel1.add(passRegisLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
         jPanel1.add(passwordTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, 320, 35));
         jPanel1.add(fullNameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 320, 35));
 
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("ชื่อ-นามสกุล");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
+        nameRegisLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nameRegisLabel.setText("ชื่อ-นามสกุล");
+        jPanel1.add(nameRegisLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
 
         submitBtn.setBackground(new java.awt.Color(255, 255, 255));
         submitBtn.setText("สร้างบัญชี");
@@ -82,13 +82,13 @@ public class RegisterPage extends javax.swing.JFrame {
         backBtn.setText("ย้อนกลับ");
         jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, -1, 40));
 
-        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/ลงทะเบียน.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 70, -1, -1));
+        regisTextLabel.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        regisTextLabel.setForeground(new java.awt.Color(255, 255, 255));
+        regisTextLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/ลงทะเบียน.png"))); // NOI18N
+        jPanel1.add(regisTextLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 70, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Group 11.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        registratioinLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Group 11.png"))); // NOI18N
+        jPanel1.add(registratioinLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,18 +160,6 @@ public class RegisterPage extends javax.swing.JFrame {
         this.fullNameTextField = fullNameTextField;
     }
 
-    public JLabel getjLabel1() {
-        return jLabel1;
-    }
-
-    public void setjLabel1(JLabel jLabel1) {
-        this.jLabel1 = jLabel1;
-    }
-
-    public JLabel getjLabel2() {
-        return jLabel2;
-    }
-
     public JButton getSubmitBtn() {
         return submitBtn;
     }
@@ -179,34 +167,6 @@ public class RegisterPage extends javax.swing.JFrame {
     public void setSubmitBtn(JButton submitBtn) {
         this.submitBtn = submitBtn;
     }
-
-    public void setjLabel2(JLabel jLabel2) {
-        this.jLabel2 = jLabel2;
-    }
-
-    public JLabel getjLabel3() {
-        return jLabel3;
-    }
-
-    public void setjLabel3(JLabel jLabel3) {
-        this.jLabel3 = jLabel3;
-    }
-
-    public JLabel getjLabel4() {
-        return jLabel4;
-    }
-
-    public void setjLabel4(JLabel jLabel4) {
-        this.jLabel4 = jLabel4;
-    }
-
-    public JPanel getjPanel1() {
-        return jPanel1;
-    }
-
-    public void setjPanel1(JPanel jPanel1) {
-        this.jPanel1 = jPanel1;
-    }   
 
     public JTextField getPasswordTextField() {
         return passwordTextField;
@@ -228,14 +188,14 @@ public class RegisterPage extends javax.swing.JFrame {
     private javax.swing.JTextField StudentIdTextField;
     private javax.swing.JButton backBtn;
     private javax.swing.JTextField fullNameTextField;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel nameRegisLabel;
+    private javax.swing.JLabel passRegisLabel;
     private javax.swing.JTextField passwordTextField;
+    private javax.swing.JLabel regisPicture;
+    private javax.swing.JLabel regisTextLabel;
+    private javax.swing.JLabel registratioinLabel;
+    private javax.swing.JLabel stIdRegisLabel;
     private javax.swing.JButton submitBtn;
     // End of variables declaration//GEN-END:variables
 }

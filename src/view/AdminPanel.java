@@ -43,8 +43,8 @@ public class AdminPanel extends javax.swing.JFrame {
         addLeaderBtn = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         candidateTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        candidateLabel = new javax.swing.JLabel();
+        adminLabel = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -119,14 +119,14 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 600, 350));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel1.setText("ผู้ลงสมัครเลือกตั้ง");
-        jLabel1.setToolTipText("");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+        candidateLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        candidateLabel.setText("ผู้ลงสมัครเลือกตั้ง");
+        candidateLabel.setToolTipText("");
+        jPanel2.add(candidateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/AdminPanal.png"))); // NOI18N
-        jLabel4.setText("ผู้");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, -1));
+        adminLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/AdminPanal.png"))); // NOI18N
+        adminLabel.setText("ผู้");
+        jPanel2.add(adminLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -215,9 +215,9 @@ public class AdminPanel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addLeaderBtn;
+    private javax.swing.JLabel adminLabel;
+    private javax.swing.JLabel candidateLabel;
     private javax.swing.JTable candidateTable;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
