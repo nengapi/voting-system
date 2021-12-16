@@ -17,7 +17,6 @@ public class FinalController implements ActionListener {
         view.getLogoutBtn().addActionListener(this);
         
         scoreModel = new ScoreModel();
-        System.out.println(scoreModel.getScore());
     }
 
     @Override
