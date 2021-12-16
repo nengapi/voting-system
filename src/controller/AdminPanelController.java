@@ -41,7 +41,7 @@ public class AdminPanelController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource().equals(view.getAddLeaderBtn())) {
-            new ModalLeaderController();
+            new ModalLeaderController(view);
         } else if (ae.getSource().equals(view.getSetTimeBtn())) {
             if (votingTimeModel.update(view.getSetTimeTextField().getText())) {
                 JOptionPane.showMessageDialog(null, "กำหนดเวลาสำเร็จ", "Successfully", JOptionPane.INFORMATION_MESSAGE);
