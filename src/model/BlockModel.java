@@ -18,10 +18,22 @@ public class BlockModel {
     private String sql;
     private User user;
 
-    public BlockModel(User u) {
-        user = u;
+    public BlockModel() {
         block = new ArrayList<Block>();
         readBlock(false);
+    }
+
+    public BlockModel(User u) {
+        this();
+        user = u;
+    }
+
+    public ArrayList<Block> getBlock() {
+        return block;
+    }
+
+    public void setBlock(ArrayList<Block> block) {
+        this.block = block;
     }
 
     public void readBlock(boolean single) {
@@ -35,7 +47,7 @@ public class BlockModel {
 
             rs = check.executeQuery();
 
-            if (rs != null && rs.next()) {
+            while (rs != null && rs.next()) {
                 singleBlock = new Block();
                 singleBlock.setBlockID(rs.getInt("BlockID"));
                 singleBlock.setPrevBlockID(rs.getInt("prevBlockID"));

@@ -81,6 +81,11 @@ public class Block {
     public void setMessagePrevHash(String messagePrevHash) {
         this.messagePrevHash = messagePrevHash;
     }
+
+    @Override
+    public String toString() {
+        return "Block{" + "blockID=" + blockID + ", prevBlockID=" + prevBlockID + ", voterID=" + voterID + ", candidate=" + candidate + ", timeStamp=" + timeStamp + ", messageHash=" + messageHash + ", messagePrevHash=" + messagePrevHash + '}';
+    }
     
     
     

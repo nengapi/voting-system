@@ -8,17 +8,20 @@ import view.AdminPanel;
 import model.Candidate;
 import model.VotingTimeModel;
 import model.CandidateModel;
+import model.ScoreModel;
 
 public class AdminPanelController implements ActionListener {
 
     private AdminPanel view;
     private CandidateModel candidateModel;
     private VotingTimeModel votingTimeModel;
+    private ScoreModel scoreModel;
 
     public AdminPanelController() {
         view = new AdminPanel();
         candidateModel = new CandidateModel();
         votingTimeModel = new VotingTimeModel();
+        scoreModel = new ScoreModel();
 
         view.setVisible(true);
         view.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -49,6 +52,10 @@ public class AdminPanelController implements ActionListener {
 
     public void renderTable(ArrayList<Candidate> candidate) {
         DefaultTableModel table = (DefaultTableModel) view.getCandidateTable().getModel();
+        
+//        for (int i =0; i < scoreModel.getScore().size(); i++) {
+//            
+//        }
         
         for (int i = 0; i < candidate.size(); i++) {
             table.addRow(new Object[0]);
