@@ -22,6 +22,7 @@ public class HomePageController implements ActionListener {
         view.setVisible(true);
         view.getDesciptionBtn().addActionListener(this);
         view.getVotingBtn().addActionListener(this);
+        view.getLogoutBtn().addActionListener(this);
         
         view.getStudentName().setText(u.getFullName());
         view.getStudentId().setText(u.getStudentId());
@@ -57,6 +58,8 @@ public class HomePageController implements ActionListener {
             new DescriptionController();
         } else if (e.getSource().equals(view.getVotingBtn())) {
             new VotePageController(user);
+        } else if (e.getSource().equals(view.getLogoutBtn())) {
+            System.exit(0);
         }
     }
 }

@@ -67,7 +67,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         setTimeBtn.setBackground(new java.awt.Color(255, 255, 255));
         setTimeBtn.setText("กำหนดเวลาโหวต");
-        jPanel2.add(setTimeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 120, -1, 37));
+        jPanel2.add(setTimeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 170, -1, 37));
 
         logoutBtn.setBackground(new java.awt.Color(255, 255, 255));
         logoutBtn.setText("ออกจากระบบ");
@@ -76,7 +76,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         setTimeTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         setTimeTextField.setText("00:00:00");
-        jPanel2.add(setTimeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, 138, 40));
+        jPanel2.add(setTimeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 120, 138, 40));
 
         addLeaderBtn.setBackground(new java.awt.Color(255, 255, 255));
         addLeaderBtn.setText("เพื่มผู้ลงสมัคร");
@@ -117,12 +117,12 @@ public class AdminPanel extends javax.swing.JFrame {
             candidateTable.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 610, 350));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 600, 350));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel1.setText("ผู้ลงสมัครเลือกตั้ง");
         jLabel1.setToolTipText("");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/AdminPanal.png"))); // NOI18N
         jLabel4.setText("ผู้");
@@ -202,6 +202,14 @@ public class AdminPanel extends javax.swing.JFrame {
 
     public void setSetTimeTextField(JTextField setTimeTextField) {
         this.setTimeTextField = setTimeTextField;
+    }
+
+    public JButton getLogoutBtn() {
+        return logoutBtn;
+    }
+
+    public void setLogoutBtn(JButton logoutBtn) {
+        this.logoutBtn = logoutBtn;
     }
 
 

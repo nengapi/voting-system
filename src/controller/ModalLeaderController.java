@@ -2,6 +2,7 @@ package controller;
 
 import java.awt.event.*;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import model.CandidateModel;
 import view.ModalLeader;
 
@@ -31,8 +32,9 @@ public class ModalLeaderController implements ActionListener {
                 view.dispose();
                 new AdminPanelController();
                 System.out.println("Candidate was registered successed");
+                JOptionPane.showMessageDialog(null, "เพิ่มผู้สมัครสำเร็จ", "Successfully", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                System.out.println("Candidate was registered failed");
+                JOptionPane.showMessageDialog(null, "เพิ่มผู้สมัครไม่สำเร็จ", "Failed", JOptionPane.ERROR_MESSAGE);
             }
         } else if (ae.getSource().equals(view.getCancelBtn())) {
             view.dispose();

@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.*;
 import javax.swing.JFrame;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import view.AdminPanel;
 import model.Candidate;
@@ -27,7 +28,8 @@ public class AdminPanelController implements ActionListener {
         view.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         view.getAddLeaderBtn().addActionListener(this);
         view.getSetTimeBtn().addActionListener(this);
-
+        view.getLogoutBtn().addActionListener(this);
+        
         String[] votingTime = votingTimeModel.get().split("/");
         view.getSetTimeTextField().setText(votingTime[0]);
 
@@ -40,13 +42,14 @@ public class AdminPanelController implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource().equals(view.getAddLeaderBtn())) {
             new ModalLeaderController();
-            view.dispose();
-        } else if (ae.getSource().equals(view.getSetTimeBtn())) {
-            if (votingTimeModel.update(view.getSetTimeTextField().getText())) {
-                System.out.println("Time was set.");
+        } else if(ae.getSource().equals(view.getSetTimeBtn())) {
+            if(votingTimeModel.update(view.getSetTimeTextField().getText())) {
+                JOptionPane.showMessageDialog(null, "กำหนดเวลาสำเร็จ", "Successfully", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                System.out.println("Set time failed.");
+                JOptionPane.showMessageDialog(null, "กำหนดเวลาไม่สำเร็จ", "Failed", JOptionPane.ERROR_MESSAGE);
             }
+        } else if (ae.getSource().equals(view.getLogoutBtn())) {
+            System.exit(0);
         }
     }
 
