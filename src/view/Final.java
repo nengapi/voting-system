@@ -55,7 +55,7 @@ public class Final extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ออกจากระบบ");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, -1, 50));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, -1, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/finalPage.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 480));
