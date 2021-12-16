@@ -80,16 +80,6 @@ public class RegisterPage extends javax.swing.JFrame {
 
         backBtn.setBackground(new java.awt.Color(255, 255, 255));
         backBtn.setText("ย้อนกลับ");
-        backBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backBtnMouseClicked(evt);
-            }
-        });
-        backBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtnActionPerformed(evt);
-            }
-        });
         jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, -1, 40));
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
@@ -117,14 +107,6 @@ public class RegisterPage extends javax.swing.JFrame {
     private void submitBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitBtnMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_submitBtnMouseClicked
-
-    private void backBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backBtnMouseClicked
-
-    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backBtnActionPerformed
 
     /**
      * @param args the command line arguments

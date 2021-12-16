@@ -51,7 +51,7 @@ public class Candidate {
 
     @Override
     public String toString() {
-        return "Candidate{" + "studentId=" + studentId + ", name=" + name + ", policy=" + policy + '}';
+        return "ชื่อ-นามสกุล คือ " + name + " นโยบาย คือ " + policy;
     }
     
     

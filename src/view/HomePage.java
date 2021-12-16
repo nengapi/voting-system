@@ -31,11 +31,11 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         logoutBtn = new javax.swing.JButton();
+        descriptionBtn = new javax.swing.JButton();
         votingBtn = new javax.swing.JButton();
         studentName = new javax.swing.JLabel();
         studentId = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        desciptionBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,17 +45,16 @@ public class HomePage extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logoutBtn.setBackground(new java.awt.Color(255, 255, 255));
-        logoutBtn.setText("ออกจากระบบ");
-        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logoutBtnActionPerformed(evt);
-            }
-        });
+        logoutBtn.setText("ออกระบบ");
         jPanel1.add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 153, 40));
+
+        descriptionBtn.setBackground(new java.awt.Color(255, 255, 255));
+        descriptionBtn.setText("คำแนะนำ");
+        jPanel1.add(descriptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 153, 40));
 
         votingBtn.setBackground(new java.awt.Color(255, 255, 255));
         votingBtn.setText("เลือกตั้ง");
-        jPanel1.add(votingBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 153, 40));
+        jPanel1.add(votingBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 153, 40));
 
         studentName.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
         studentName.setForeground(new java.awt.Color(255, 255, 255));
@@ -73,15 +72,6 @@ public class HomePage extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/unnamed (1) 1.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
 
-        desciptionBtn.setBackground(new java.awt.Color(255, 255, 255));
-        desciptionBtn.setText("คำแนะนำ");
-        desciptionBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                desciptionBtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(desciptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 153, 40));
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Home.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -98,14 +88,6 @@ public class HomePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void desciptionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desciptionBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_desciptionBtnActionPerformed
-
-    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_logoutBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,6 +124,14 @@ public class HomePage extends javax.swing.JFrame {
         });
     }
 
+    public JButton getDesciptionBtn() {
+        return descriptionBtn;
+    }
+
+    public void setDesciptionBtn(JButton desciptionBtn) {
+        this.descriptionBtn = desciptionBtn;
+    }
+
     public JButton getVotingBtn() {
         return votingBtn;
     }
@@ -170,20 +160,12 @@ public class HomePage extends javax.swing.JFrame {
         return logoutBtn;
     }
 
-    public JButton getDesciptionBtn() {
-        return desciptionBtn;
-    }
-
-    public void setDesciptionBtn(JButton desciptionBtn) {
-        this.desciptionBtn = desciptionBtn;
-    }
-
     public void setLogoutBtn(JButton logoutBtn) {
         this.logoutBtn = logoutBtn;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton desciptionBtn;
+    private javax.swing.JButton descriptionBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -192,4 +174,12 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel studentName;
     private javax.swing.JButton votingBtn;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getLogOutBtn() {
+        return logoutBtn;
+    }
+
+    public void setLogOutBtn(JButton logOutBtn) {
+        this.logoutBtn = logOutBtn;
+    }
 }

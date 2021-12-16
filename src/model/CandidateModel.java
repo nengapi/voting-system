@@ -42,13 +42,13 @@ public class CandidateModel {
             return false;
         }
     }
-    
+
     public void readCandidate() {
         String sql = "SELECT * FROM candidate";
         try {
             stmt = CONNECT.prepareStatement(sql);
             result = stmt.executeQuery();
-            while (result!=null && result.next()) {
+            while (result != null && result.next()) {
                 candidate = new Candidate();
                 candidate.setStudentId(result.getString("student_id"));
                 candidate.setName(result.getString("name"));
@@ -59,4 +59,5 @@ public class CandidateModel {
             e.printStackTrace();
         }
     }
+
 }
