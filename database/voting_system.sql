@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 15, 2021 at 11:14 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.13
+-- Host: localhost
+-- Generation Time: Dec 16, 2021 at 03:20 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,11 +42,10 @@ CREATE TABLE `block` (
 --
 
 INSERT INTO `block` (`BlockID`, `prevBlockID`, `voterID`, `candidate`, `created_at`, `messageHash`, `messagePrevHash`) VALUES
-(3, NULL, 3, 1, '2021-12-15 00:56:41', '5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9', NULL),
-(4, NULL, 4, 1, '2021-12-15 02:56:49', '5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9', NULL),
-(5, NULL, 4, 1, '2021-12-15 02:57:03', '5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9', NULL),
-(6, NULL, 4, 1, '2021-12-15 02:57:05', '5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9', NULL),
-(7, NULL, 4, 1, '2021-12-15 02:57:08', '5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9', NULL);
+(45, NULL, 2, 0, '2021-12-16 09:49:18', '5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9', NULL),
+(52, 45, 10, 2, '2021-12-16 11:18:49', '5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466', '5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9'),
+(53, 52, 3, 2, '2021-12-16 11:19:10', '3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2', '5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466'),
+(54, 53, 4, 0, '2021-12-16 11:19:29', '3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b', '3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2');
 
 -- --------------------------------------------------------
 
@@ -58,6 +57,7 @@ CREATE TABLE `candidate` (
   `id` int(11) NOT NULL,
   `student_id` varchar(8) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `policy` varchar(255) NOT NULL,
   `create_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -65,10 +65,13 @@ CREATE TABLE `candidate` (
 -- Dumping data for table `candidate`
 --
 
-INSERT INTO `candidate` (`id`, `student_id`, `name`, `create_at`) VALUES
-(1, '63070001', '#1 Candidate', '2021-12-15 03:33:46'),
-(2, '63070002', '#2 Candidate', '2021-12-15 03:33:42'),
-(3, '63070003', '#3 Candidate', '2021-12-15 03:33:59');
+INSERT INTO `candidate` (`id`, `student_id`, `name`, `policy`, `create_at`) VALUES
+(1, '64070001', 'สุชัชวีร์ สุวรรณสวัสดิ์', 'ผมจบ MIT', '2021-12-16 09:27:57'),
+(2, '64070002', 'ชัชชาติ สิทธิพันธุ์', 'ชายที่แข็งแกร่งที่สุดในแผ่นดิน', '2021-12-16 09:28:42'),
+(3, '64070003', 'ประยุทธ์ จันทร์โอชา', 'สนับสนุนเลี้ยงไก่ 2 ตัวต่อบ้าน', '2021-12-16 09:29:13'),
+(4, '64070004', 'จัสติน บีเบอร์', 'สนับสนุนการปั่นจักรยาน', '2021-12-16 09:29:51'),
+(5, '64070005', 'มงคล มีชัย', 'ขายฝัน', '2021-12-16 10:39:04'),
+(6, '64070006', 'นายมีชัย มั่งมี', 'ทำดี', '2021-12-16 11:16:47');
 
 -- --------------------------------------------------------
 
@@ -78,15 +81,16 @@ INSERT INTO `candidate` (`id`, `student_id`, `name`, `create_at`) VALUES
 
 CREATE TABLE `setting` (
   `id` int(11) NOT NULL,
-  `voting_time` time NOT NULL
+  `voting_time` time NOT NULL,
+  `update_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `setting`
 --
 
-INSERT INTO `setting` (`id`, `voting_time`) VALUES
-(1, '00:30:00');
+INSERT INTO `setting` (`id`, `voting_time`, `update_at`) VALUES
+(1, '01:00:00', '2021-12-16 08:17:08');
 
 -- --------------------------------------------------------
 
@@ -108,8 +112,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `student_id`, `password`, `fullName`, `isAdmin`, `created_at`) VALUES
-(3, 1234, '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'neng', 0, '2021-12-14 23:15:22'),
-(4, 169, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8', 'Suphachai C.', 1, '2021-12-15 02:56:36');
+(2, 1, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8', 'Admin', 1, '2021-12-16 09:25:19'),
+(3, 63070121, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8', 'Pisitchai Rueangwatanaphong', 0, '2021-12-16 09:26:06'),
+(4, 63070156, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8', 'Wannasa Chonchoochart', 0, '2021-12-16 09:26:22'),
+(5, 63070138, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8', 'Puriwat Udompittayasit', 0, '2021-12-16 09:26:43'),
+(10, 63070169, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8', 'Suphachai Chuensooksri', 0, '2021-12-16 11:17:47'),
+(11, 63070183, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8', 'Apichet Komwatcharapong', 0, '2021-12-16 13:49:14');
 
 --
 -- Indexes for dumped tables
@@ -150,13 +158,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `block`
 --
 ALTER TABLE `block`
-  MODIFY `BlockID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `BlockID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `candidate`
 --
 ALTER TABLE `candidate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `setting`
@@ -168,7 +176,7 @@ ALTER TABLE `setting`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
