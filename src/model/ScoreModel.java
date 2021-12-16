@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class ScoreModel {
 
     private ArrayList score;
-    private int count = 0;
 
     public ScoreModel() {
         BlockModel blockModel = new BlockModel();

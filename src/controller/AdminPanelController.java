@@ -29,7 +29,7 @@ public class AdminPanelController implements ActionListener {
         view.getAddLeaderBtn().addActionListener(this);
         view.getSetTimeBtn().addActionListener(this);
         view.getLogoutBtn().addActionListener(this);
-        
+
         String[] votingTime = votingTimeModel.get().split("/");
         view.getSetTimeTextField().setText(votingTime[0]);
 
@@ -42,8 +42,8 @@ public class AdminPanelController implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource().equals(view.getAddLeaderBtn())) {
             new ModalLeaderController();
-        } else if(ae.getSource().equals(view.getSetTimeBtn())) {
-            if(votingTimeModel.update(view.getSetTimeTextField().getText())) {
+        } else if (ae.getSource().equals(view.getSetTimeBtn())) {
+            if (votingTimeModel.update(view.getSetTimeTextField().getText())) {
                 JOptionPane.showMessageDialog(null, "กำหนดเวลาสำเร็จ", "Successfully", JOptionPane.INFORMATION_MESSAGE);
             } else {
                 JOptionPane.showMessageDialog(null, "กำหนดเวลาไม่สำเร็จ", "Failed", JOptionPane.ERROR_MESSAGE);
@@ -55,18 +55,20 @@ public class AdminPanelController implements ActionListener {
 
     public void renderTable(ArrayList<Candidate> candidate) {
         DefaultTableModel table = (DefaultTableModel) view.getCandidateTable().getModel();
-        
-//        for (int i =0; i < scoreModel.getScore().size(); i++) {
-//            
-//        }
-        
+
         for (int i = 0; i < candidate.size(); i++) {
+            int count = 0;
             table.addRow(new Object[0]);
             table.setValueAt(i + 1, i, 0);
             table.setValueAt(candidate.get(i).getStudentId(), i, 1);
             table.setValueAt(candidate.get(i).getName(), i, 2);
             table.setValueAt(candidate.get(i).getPolicy(), i, 3);
-            table.setValueAt(0, i, 4);
+            for (int j = 0; j < scoreModel.getScore().size(); j++) {
+                if ((int) scoreModel.getScore().get(j) == (i + 1)) {
+                    count++;
+                }
+                table.setValueAt(count, i, 4);
+            }
         }
     }
 
